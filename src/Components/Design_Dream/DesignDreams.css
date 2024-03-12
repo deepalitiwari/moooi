@@ -1,0 +1,29 @@
+.DesignDream{
+    display: flex;
+    text-align: center;
+}
+.Dream-background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(76, 54, 58);
+   width: 50%;
+   height: 860px;
+   box-sizing: border-box;
+   padding: 6.9444444444vw 5.5555555556vw;
+   text-align: center;
+word-spacing: -5px;
+}
+.Dream-image img{
+    box-sizing: border-box;
+    width: 100%;
+    height: 860px;
+}
+.DesignDream h3{
+    color: gray;
+}
+.DesignDream h1{
+    color: white;
+    font-size: 80px;
+}
