@@ -25,7 +25,8 @@
 .europe-btn select{
     background-color: transparent;
     color: white;
-    width: 100%;
+    /* width: 60%; */
+    font-size: 20px;
     border: none;
     outline: none;
 }

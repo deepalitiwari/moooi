@@ -4,7 +4,7 @@ import DesignDream from "./Components/Design_Dream/DesignDream";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
-import Menu from "./Components/Menu/Menu";
+// import Menu from "./Components/Menu/Menu";
 import Strategy from "./Components/Strategy/Strategy";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
-      <Menu />
+      {/* <Menu /> */}
       <Collection />
       <DesignDream
         h3="Design Dream"
