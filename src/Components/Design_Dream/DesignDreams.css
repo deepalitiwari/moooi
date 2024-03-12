@@ -13,7 +13,7 @@
    box-sizing: border-box;
    padding: 6.9444444444vw 5.5555555556vw;
    text-align: center;
-word-spacing: -5px;
+   word-spacing: -5px;
 }
 .Dream-image img{
     box-sizing: border-box;
@@ -26,4 +26,18 @@ word-spacing: -5px;
 .DesignDream h1{
     color: white;
     font-size: 80px;
+}
+
+@media(max-width:768px){
+    .DesignDream{
+        display: block;
+    }
+    .Dream-background{
+         width: 100%;
+         text-align: center;
+    }
+    .Dream-image{
+        width: 100%;
+        height: auto;
+    }
 }
