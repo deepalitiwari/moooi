@@ -1,13 +1,14 @@
-.strategy{
+.strategy {
     background-image: url(../../../public/Images/Moooi_Generations_Header1.webp);
     background-size: cover;
     width: 100%;
-    height: 900px;
-    margin-top: -4px;
+    height: min(900px, 100%);
+    margin-top: -10px;
     display: flex;
     justify-content: end;
 }
-.content{
+
+.content {
     padding: 6.9444444444vw 5.5555555556vw;
     width: 40%;
     text-align: center;
@@ -15,12 +16,48 @@
     flex-direction: column;
     justify-content: center;
 }
-.strategy-heading{
+
+.strategy-heading {
     color: rgb(227, 221, 221);
     font-size: 1.3rem;
-    
 }
-.strategy .para{
+
+.strategy .para {
     color: white;
     font-size: 90px;
+}
+
+
+@media(max-width:576px) {
+    .strategy {
+        height: 100vh;
+        margin-top: -5px;
+        background-position: -300px 0px;
+    }
+
+    .content {
+        width: 80%;
+        /* text-align: center; */
+
+    }
+
+    .strategy-heading {
+        font-size: 1.6rem;
+    }
+
+    .strategy .para {
+        font-size: 40px;
+    }
+}
+
+@media(min-width:576px) and (max-width:1200px) {
+    .strategy {
+        height: 100vh;
+        margin-top: -5px;
+        background-position: -300px 0px;
+    }
+
+    .strategy .para {
+        font-size: 45px;
+    }
 }

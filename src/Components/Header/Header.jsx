@@ -9,37 +9,17 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 const Header = () => {
   return (
     <div>
-      <header className="header">
-        <div className="list-items">
-          <div className="mic">
-            <li>
-              <a href="#">
-                <FiMic />
-              </a>
-            </li>
-          </div>
-          <div className="moooi">
-            <a href="#">
-              <li>moooi</li>
-            </a>
-          </div>
-          <div className="icons">
-            <a href="#" title="Search">
-              <li>
-                <FaSearch />
-              </li>
-            </a>
-            <a href="#">
-              <li>
-                <HiOutlineViewBoards />
-              </li>
-            </a>
-            <a href="#">
-              <li>
-                <MdOutlineShoppingBag />
-              </li>
-            </a>
-          </div>
+      <header>
+        <div className="leftHead">
+          <FiMic />
+        </div>
+        <div className="moooi">
+          <h3>moooi</h3>
+        </div>
+        <div className="rightHead">
+          <FaSearch />
+          <HiOutlineViewBoards />
+          <MdOutlineShoppingBag />
         </div>
       </header>
     </div>

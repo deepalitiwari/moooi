@@ -1,40 +1,52 @@
-.header{
-    background-color: black;
+header {
+    color: rgb(236, 233, 233);
     width: 100%;
-    height: 3rem;
-}
-.list-items{
     display: flex;
     align-items: center;
-    list-style-type: none;
     justify-content: space-between;
+    padding: 30px 60px;
     font-size: 25px;
-    padding: 40px;
+    box-sizing: border-box;
+    /* position: relative; */
 }
-.moooi{
-    font-size: 40px;
-    letter-spacing: 9px;
-    margin-left: 10rem;
+
+header h3 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 450px;
+    letter-spacing: 10px;
 }
-.icons{
+
+.leftHead {
+    width: 33.33%;
     display: flex;
-    gap: 40px;
-    font-size: 30px;
+    justify-content: flex-start;
 }
-.list-items a{
-    color: white;
-    text-decoration: none;
-    border-radius: 2px;
-    display: inline-block;
-    padding: 1px 2px;
+
+.moooi {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
 }
-.list-items a:hover{
-    background-color: rgb(174, 166, 166);
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    padding: 1px 2px;
+
+.rightHead {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
 }
-.moooi a:hover{
-    background-color: transparent;
+
+@media (max-width:576px) {
+    header {
+        font-size: 20px;
+        padding: 30px 25px;
+    }
+
+    .rightHead {
+        gap: 10px;
+    }
+
+    header h3 {
+        font-size: 30px;
+    }
 }

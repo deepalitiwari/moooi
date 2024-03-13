@@ -9,7 +9,7 @@ function Main() {
         {/* <button className="btn">Discover our new Kisss Lounge Chair</button> */}
 
         <div className="Mainbtn">
-          <button className="btn">Discover our new Kisss Lounge Chair</button>
+          <button>Discover our new Kisss Lounge Chair</button>
         </div>
       </div>
     </div>

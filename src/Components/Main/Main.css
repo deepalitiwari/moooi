@@ -3,7 +3,7 @@
     min-width: 100%;
     min-height: 100%;
     width: 100%;
-    height: aito;
+    height: calc(100vh + 100px);
     margin-top: -100px;
     background-repeat: no-repeat;
     display: flex;
@@ -11,26 +11,31 @@
     align-items: center;
     text-align: center;
 }
-.mainHead{
-    width: 60%;
-    padding: 300px;
+
+.mainHead {
+    width: min(600px, 100%);
+    margin: auto;
+    /* padding: 300px; */
     /* padding:6.9444444444vw 5.5555555556vw; */
 }
+
 .background-image h1 {
     color: white;
     font-size: 100px;
     font-weight: 400;
     cursor: pointer;
 }
-.background-image p{
+
+.background-image p {
     text-transform: uppercase;
-        color: white;
-        font-weight: 400;
-        letter-spacing: 2px;
-        font-size: 20px;
-        text-align: center;
-        cursor: pointer;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
 }
+
 .Mainbtn button {
     border: none;
     color: rgb(71, 70, 70);
@@ -41,14 +46,24 @@
     cursor: pointer;
 }
 
-@media(max-width:768px ){
-    .background-image{
-        background-size: 100% auto;
+@media(max-width:576px) {
+    .background-image {
+        background-size: 100% 100%;
+        height: 100vh;
     }
-    
-    .background-image h1{
-        /* max-width: 100%;
-        height: 107vh; */
-        color: brown;
+
+    .background-image h1 {
+        font-size: 28px;
+    }
+
+    .background-image p {
+        font-size: 15px;
+    }
+
+    .Mainbtn button {
+        border-radius: 30px;
+        font-size: 1rem;
+        margin-top: 50px;
+        padding: 4px;
     }
 }

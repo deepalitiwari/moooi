@@ -1,43 +1,72 @@
-.DesignDream{
+.DesignDream {
     display: flex;
     text-align: center;
+    height: 100vh;
 }
-.Dream-background{
+
+.Dream-background {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(76, 54, 58);
-   width: 50%;
-   height: 860px;
-   box-sizing: border-box;
-   padding: 6.9444444444vw 5.5555555556vw;
-   text-align: center;
-   word-spacing: -5px;
-}
-.Dream-image img{
+    /* background-color: rgb(76, 54, 58); */
+    height: 100vh;
+    width: 50%;
+    padding: 6.9444444444vw 5.5555555556vw;
     box-sizing: border-box;
+    text-align: center;
+    word-spacing: -5px;
+}
+
+.Dream-image {
+    width: 50%;
+}
+
+.Dream-image img {
+    /* box-sizing: border-box; */
     width: 100%;
-    height: 860px;
+    object-fit: cover;
+    /* height: 100vh; */
+    height: min(100vh, 100%);
 }
-.DesignDream h3{
+
+.DesignDream h3 {
     color: gray;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 1.5rem;
 }
-.DesignDream h1{
-    color: white;
+
+.DesignDream h1 {
+    /* color: white; */
     font-size: 80px;
 }
 
-@media(max-width:768px){
-    .DesignDream{
+@media(max-width:576px) {
+    .DesignDream {
         display: block;
+        /* height: 100vh; */
     }
-    .Dream-background{
-         width: 100%;
-         text-align: center;
-    }
-    .Dream-image{
+
+    .Dream-background {
+        height: 50vh;
         width: 100%;
-        height: auto;
+    }
+
+    .Dream-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .DesignDream h1 {
+        /* color: white; */
+        font-size: 40px;
+    }
+
+}
+
+@media(min-width:576px) and (max-width:1200px) {
+    .DesignDream h1 {
+        font-size: 40px;
     }
 }
