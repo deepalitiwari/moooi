@@ -13,7 +13,7 @@
 }
 
 .mainHead {
-    width: min(600px, 100%);
+    width: min(1100px, 100%);
     margin: auto;
     /* padding: 300px; */
     /* padding:6.9444444444vw 5.5555555556vw; */
@@ -65,5 +65,14 @@
         font-size: 1rem;
         margin-top: 50px;
         padding: 4px;
+    }
+}
+
+@media(min-width:578px) and (max-width:1100px) {
+    .background-image h1 {
+
+        font-size: 70px;
+        text-align: center;
+        cursor: pointer;
     }
 }

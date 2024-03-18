@@ -1,13 +1,13 @@
 import React from "react";
 import "./Collection.css";
-
+import { Link } from "react-router-dom";
 function Collection() {
   const userCollection = [
     {
       id: 1,
       src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F246251%2F588x468%2Fabda67d918%2Fbedding_-_bath.png&w=640&q=80",
-      alt: "bedding and bath",
-      title: "bedding and bath",
+      alt: "Bedding & Bath",
+      title: "Bedding & Bath",
     },
     {
       id: 2,
@@ -43,14 +43,16 @@ function Collection() {
   return (
     <div className="collection">
       <h3 className="heading">Browse our Collection</h3>
-      <div className="carts">
+      <div className="Collectioncarts">
         {userCollection.map((item, index) => (
-          <div className="cart" key={index}>
-            <div className="cartImg">
-              <img key={item.id} src={item.src} alt={item.alt} />
+          <Link to={item.title} key={index}>
+            <div className="collectioncart" key={index}>
+              <div className="collectionImg">
+                <img key={item.id} src={item.src} alt={item.alt} />
+              </div>
+              <div className="collectionTitle">{item.title}</div>
             </div>
-            <div className="cartTitle">{item.title}</div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

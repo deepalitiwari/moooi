@@ -13,7 +13,7 @@ function Item({ dataHead, data, bottom }) {
           Our collection contains work from emerging talent and internationally
           recognized designers. Together, we create A Life Extraordinary.
         </p>
-        <div className="btn">
+        <div className="buttons">
           <div className="item-btn">
             <SlArrowLeftCircle className="icon" />
 
@@ -46,7 +46,7 @@ function Item({ dataHead, data, bottom }) {
           </div>
         ))}
       </div>
-      {/* <div className="item-bottom">
+      <div className="item-bottom">
         <h1 className="heading">our suggestions</h1>
         <p className="para">
           Turn more dreams into reality. <br /> {bottom.p}
@@ -56,7 +56,7 @@ function Item({ dataHead, data, bottom }) {
             return <button>{item}</button>;
           })}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
