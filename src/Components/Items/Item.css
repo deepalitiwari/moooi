@@ -1,5 +1,5 @@
 .items {
-    margin: 50px 80px;
+    margin: 50px 30px;
 }
 
 .main {
@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 50px 80px; */
 }
 
 .main .heading {
@@ -74,6 +73,11 @@
     flex-wrap: wrap;
     margin: 0 0 111px;
     padding: 74px 37px 0;
+}
+
+.item-carts a {
+    text-decoration: none;
+    color: black;
 }
 
 .cartImg img {

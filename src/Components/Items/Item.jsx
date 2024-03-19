@@ -2,6 +2,7 @@ import React from "react";
 import "./Item.css";
 import { SlArrowLeftCircle } from "react-icons/sl";
 import { MdOutlineManageSearch } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Item({ dataHead, data, bottom }) {
   //   console.log("DATA", dataHead);
@@ -17,8 +18,8 @@ function Item({ dataHead, data, bottom }) {
           <div className="item-btn">
             <SlArrowLeftCircle className="icon" />
 
-            {dataHead.Btn.map((item) => {
-              return <button>{item}</button>;
+            {dataHead.Btn.map((item, index) => {
+              return <button key={index}>{item}</button>;
             })}
           </div>
           <div className="filter-btn">
@@ -31,19 +32,21 @@ function Item({ dataHead, data, bottom }) {
       </div>
       <div className="item-carts">
         {data.map((item, index) => (
-          <div className="cart" key={index}>
-            <div className="cartImg">
-              <img
-                key={item.id}
-                src={item.src}
-                alt={item.alt}
-                title={item.title}
-              />
+          <Link to={`/products/${item.type}/${index}`}>
+            <div className="cart" key={index}>
+              <div className="cartImg">
+                <img
+                  key={item.id}
+                  src={item.src}
+                  alt={item.alt}
+                  title={item.title}
+                />
+              </div>
+              <div className="cartTitle">{item.title}</div>
+              <div className="cartPrice">{item.price}</div>
+              <div className="cartavailable">{item.available}</div>
             </div>
-            <div className="cartTitle">{item.title}</div>
-            <div className="cartPrice">{item.price}</div>
-            <div className="cartavailable">{item.available}</div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="item-bottom">

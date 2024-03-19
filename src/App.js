@@ -39,6 +39,7 @@ import {
   bodyBeautyHead,
   bodyBeautybottomArea,
 } from "./Components/Items/data6";
+import ProductDetail from "./Components/Product_Details/ProductDetail";
 function App() {
   return (
     <div className="App">
@@ -54,6 +55,18 @@ function App() {
                 dataHead={beddingBathHead}
                 bottom={bottomArea}
               />
+              <Menu />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/products/:type/:index"
+          element={
+            <>
+              <Header />
+              <ProductDetail />
               <Menu />
               <Footer />
             </>
@@ -141,7 +154,6 @@ function App() {
           element={
             <>
               <Header />
-              <Menu />
               <Main />
               <Menu />
               <Collection />
