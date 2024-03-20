@@ -15,6 +15,7 @@ import { lighting } from "../Items/data3";
 import { homeAccessories } from "../Items/data4";
 import { wallFloor } from "../Items/data5";
 import { bodyBeauty } from "../Items/data6";
+import BuyItem from "../Buy_Item/BuyItem";
 const ProductDetail = () => {
   const { type, index } = useParams();
   const [prodData, setData] = useState({});
@@ -54,6 +55,12 @@ const ProductDetail = () => {
         />
       </div>
       <div className="productData">
+        <BuyItem
+          src={prodData.src}
+          title={prodData.title}
+          price={prodData.price}
+          available={prodData.available}
+        />
         <h1>{prodData.title}</h1>
         <h3>Moooi,2022</h3>
         <div className="ProdContent">

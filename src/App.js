@@ -40,6 +40,7 @@ import {
   bodyBeautybottomArea,
 } from "./Components/Items/data6";
 import ProductDetail from "./Components/Product_Details/ProductDetail";
+import BuyItem from "./Components/Buy_Item/BuyItem";
 function App() {
   return (
     <div className="App">
@@ -155,6 +156,7 @@ function App() {
             <>
               <Header />
               <Main />
+
               <Menu />
               <Collection />
               {data.map(
