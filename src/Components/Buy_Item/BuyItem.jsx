@@ -25,10 +25,10 @@ const BuyItem = ({ src, title, price, available }) => {
           <div className="head">
             <h3>Dimension</h3>
           </div>
-          <div className="icon">
+          {/* <div className="icon">
             <IoIosArrowUp />
             <IoIosArrowDown />
-          </div>
+          </div> */}
         </div>
         <div className="dimensionImg">
           <img src={src} alt="product Image" />

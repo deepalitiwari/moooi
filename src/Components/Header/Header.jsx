@@ -1,27 +1,32 @@
-// import React, { useState } from "react";
-import {} from "react-bootstrap";
+import React, { useState } from "react";
 import "./Header.css";
-import { FaSearch } from "react-icons/fa";
+import { IoMdSearch } from "react-icons/io";
 import { FiMic } from "react-icons/fi";
 import { HiOutlineViewBoards } from "react-icons/hi";
 import { MdOutlineShoppingBag } from "react-icons/md";
-
-const Header = () => {
+import Bag from "../Bag/Bag";
+const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
+  const [isBagOpen, setIsBagOpen] = useState(false);
+  function toogleBag() {
+    setIsBagOpen(!isBagOpen);
+    console.log(isBagOpen);
+  }
   return (
     <div>
-      <header>
-        <div className="leftHead">
+      <header style={{ color: textColor, backgroundColor: backgroundColor }}>
+        <div className="leftHead" style={{ display: leftHeader }}>
           <FiMic />
         </div>
-        <div className="moooi">
+        <div className="moooi" style={{ justifyContent: moooi }}>
           <h3>moooi</h3>
         </div>
         <div className="rightHead">
-          <FaSearch />
+          <IoMdSearch />
           <HiOutlineViewBoards />
-          <MdOutlineShoppingBag />
+          <MdOutlineShoppingBag onClick={toogleBag} />
         </div>
       </header>
+      <Bag />
     </div>
   );
 };

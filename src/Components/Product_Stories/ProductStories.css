@@ -1,0 +1,42 @@
+.MenuContiner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.ProductStories {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #2f2f2f;
+    color: rgb(247, 242, 242);
+    width: 20%;
+    padding: 70px;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ProductStories .heading {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.Stories_content {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.Stories_content li {
+    list-style-type: none;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.Stories_content a {
+    color: rgb(247, 242, 242);
+    text-decoration: none;
+}

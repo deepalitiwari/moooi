@@ -41,22 +41,36 @@ import {
 } from "./Components/Items/data6";
 import ProductDetail from "./Components/Product_Details/ProductDetail";
 import BuyItem from "./Components/Buy_Item/BuyItem";
+import ProductStories from "./Components/Product_Stories/ProductStories";
+import Contact from "./Components/Contact/Contact";
+import { useState } from "react";
+
 function App() {
+  const [show, setShow] = useState(false);
+  const handleMenu = () => {
+    setShow(!show);
+  };
   return (
     <div className="App">
+      {show ? <ProductStories /> : null}
       <Routes>
         <Route path="/*" element={<h1>Not found</h1>} />
         <Route
           path="/Bedding & Bath"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Item
                 data={beddingBath}
                 dataHead={beddingBathHead}
                 bottom={bottomArea}
               />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
@@ -66,9 +80,14 @@ function App() {
           path="/products/:type/:index"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <ProductDetail />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
@@ -78,13 +97,18 @@ function App() {
           path="/Furniture"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Item
                 data={furniture}
                 dataHead={furnitureHead}
                 bottom={furniturebottomArea}
               />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
@@ -93,13 +117,18 @@ function App() {
           path="/Lighting"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Item
                 data={lighting}
                 dataHead={lightingHead}
                 bottom={lightingbottomArea}
               />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
@@ -108,13 +137,18 @@ function App() {
           path="Home Accessories"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Item
                 data={homeAccessories}
                 dataHead={homeAccessoriesHead}
                 bottom={homeAccessoriesbottomArea}
               />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
@@ -123,13 +157,18 @@ function App() {
           path="/Wall & Floor"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Item
                 data={wallFloor}
                 dataHead={wallFloorHead}
                 bottom={wallFloorbottomArea}
               />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
@@ -144,11 +183,22 @@ function App() {
                 dataHead={bodyBeautyHead}
                 bottom={bodyBeautybottomArea}
               />
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
         />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Header />
+              <Menu handleMenu={handleMenu} />
+              <Contact />
+              <Footer />
+            </>
+          }
+        ></Route>
 
         <Route
           path="/"
@@ -157,7 +207,7 @@ function App() {
               <Header />
               <Main />
 
-              <Menu />
+              <Menu handleMenu={handleMenu} />
               <Collection />
               {data.map(
                 ({ h3, src, children, direction, style, textColor }, index) => {

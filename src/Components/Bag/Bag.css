@@ -1,0 +1,39 @@
+.bag {
+    background-color: rgb(226, 221, 221);
+    width: 400px;
+    height: 600px;
+}
+
+.icons {
+    font-size: 26px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.bagContent {
+    /* font-size: 40px; */
+    padding: 20px;
+}
+
+.head {
+    font-size: 40px;
+}
+
+.productDetails {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.productDetails img {
+    width: 80px;
+    height: 120px;
+}
+
+.productDetails data {
+    font-size: 18px;
+    text-align: center;
+}

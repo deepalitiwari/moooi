@@ -56,6 +56,7 @@
     display: flex;
     align-items: start;
     justify-content: flex-start;
+    padding-top: 20px;
 }
 
 .prodButton button {
@@ -71,6 +72,12 @@
     display: flex;
     text-align: center;
     justify-content: space-between;
+    padding: 20px 0;
+}
+
+.prodContent h3 {
+    justify-content: center;
+
 }
 
 .dimensionImg {

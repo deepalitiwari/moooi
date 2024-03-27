@@ -1,12 +1,15 @@
 .menu {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
+    /* bottom: 10px; */
+    /* left: 50%; */
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 150px;
     text-transform: uppercase;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .menu img {
