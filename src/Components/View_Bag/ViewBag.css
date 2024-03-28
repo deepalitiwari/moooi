@@ -1,0 +1,178 @@
+.top {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+}
+
+.top a {
+    text-decoration: none;
+    color: black;
+}
+
+.orderDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 150px 80px;
+    gap: 6rem;
+}
+
+.shoppingBag {
+    width: 70%;
+}
+
+.shoppingBag h1 {
+    color: #686262;
+    padding-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: -2px
+}
+
+.shoppingBag .shoppingContent {
+    border-top: 1px solid rgb(184, 179, 179);
+    border-bottom: 1px solid rgb(184, 179, 179);
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    gap: 2rem;
+}
+
+.shoppingContent .left {
+    width: 15%;
+}
+
+.shoppingContent .left img {
+    width: 100px;
+}
+
+.shoppingContent .right {
+    width: 85%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    flex-direction: column;
+}
+
+.shoppingContent .right .title {
+    padding: 30px 0;
+}
+
+.prodDetails {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.prodDetails .details {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.counting .dropdown {
+    font-size: 20px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.details .delete {
+    font-size: 20px;
+    padding: 0px 6px;
+    border-radius: 23px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.orderSummary {
+    width: 30%;
+}
+
+.orderSummary .heading h1 {
+    color: #686262;
+    padding-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: -2px
+}
+
+.sub_Total {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    flex-direction: column;
+    color: #686262;
+    gap: 20px;
+    border-top: 1px solid rgb(184, 179, 179);
+    border-bottom: 1px solid rgb(184, 179, 179);
+    padding: 40px 0;
+}
+
+.subTotalTop {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.subTotalTop .orderHead {
+    text-transform: uppercase;
+}
+
+.subTotalBottom {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.subTotalBottom .shipping {
+    text-transform: uppercase;
+}
+
+.subTotalBottom .shippingDetails {
+    font-size: 14px;
+}
+
+.overall .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.overall .totalPrice .head {
+    font-size: 25px;
+}
+
+.overall .checkOut button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.bottomIcons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: #686262;
+    padding: 70px 0;
+}
+
+.bottomIcons h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.bottomIcons .myIcons {
+    width: 33%;
+}
+
+.shippingIcons {
+    font-size: 40px;
+}

@@ -26,7 +26,7 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
           <MdOutlineShoppingBag onClick={toogleBag} />
         </div>
       </header>
-      <Bag />
+      {isBagOpen && <Bag toogleBag={toogleBag} />}
     </div>
   );
 };

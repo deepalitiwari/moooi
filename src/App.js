@@ -44,12 +44,14 @@ import BuyItem from "./Components/Buy_Item/BuyItem";
 import ProductStories from "./Components/Product_Stories/ProductStories";
 import Contact from "./Components/Contact/Contact";
 import { useState } from "react";
+import ViewBag from "./Components/View_Bag/ViewBag";
 
 function App() {
   const [show, setShow] = useState(false);
   const handleMenu = () => {
     setShow(!show);
   };
+
   return (
     <div className="App">
       {show ? <ProductStories /> : null}
@@ -195,6 +197,23 @@ function App() {
               <Header />
               <Menu handleMenu={handleMenu} />
               <Contact />
+              <Footer />
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/viewBag"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <ViewBag />
+              <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }

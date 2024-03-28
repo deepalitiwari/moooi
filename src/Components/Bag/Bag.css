@@ -1,7 +1,15 @@
 .bag {
     background-color: rgb(226, 221, 221);
-    width: 400px;
-    height: 600px;
+    position: fixed;
+    width: 460px;
+    height: 530px;
+    right: 10px;
+    top: 70px;
+    /* margin-top: -50px; */
+}
+
+.closeBag {
+    display: none;
 }
 
 .icons {
@@ -10,6 +18,7 @@
     justify-content: flex-end;
     gap: 30px;
     padding-top: 20px;
+    cursor: pointer;
 }
 
 .bagContent {
@@ -18,22 +27,80 @@
 }
 
 .head {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     font-size: 40px;
 }
 
-.productDetails {
+.product_Details {
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
+    padding-top: 20px;
 }
 
-.productDetails img {
+.product_Details .image {
+    width: 20%;
+}
+
+.product_Details img {
     width: 80px;
+    /* width: 20%; */
     height: 120px;
 }
 
-.productDetails data {
-    font-size: 18px;
+.product_Details .data {
+    font-size: 16px;
     text-align: center;
+    width: 60%;
+    margin: 30px;
+}
+
+.product_Details .price {
+    width: 20%;
+    margin: 30px;
+}
+
+.bagContent .bottom {
+    padding: 20px 0;
+}
+
+.subTotal {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid gray;
+    padding: 20px 0;
+}
+
+.total {
+    color: gray;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.bottom .buttons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.bottom .buttons button {
+    border: none;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.buttons .viewBag {
+    color: rgb(71, 70, 70);
+}
+
+.buttons .checkOut {
+    background-color: black;
+    color: white;
 }
