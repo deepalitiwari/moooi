@@ -179,7 +179,12 @@ function App() {
           path="/Body & Beauty"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Item
                 data={bodyBeauty}
                 dataHead={bodyBeautyHead}
@@ -194,7 +199,12 @@ function App() {
           path="/contact"
           element={
             <>
-              <Header />
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
               <Menu handleMenu={handleMenu} />
               <Contact />
               <Footer />
@@ -223,9 +233,8 @@ function App() {
           path="/"
           element={
             <>
-              <Header />
+              <Header textColor={"#fff"} />
               <Main />
-
               <Menu handleMenu={handleMenu} />
               <Collection />
               {data.map(

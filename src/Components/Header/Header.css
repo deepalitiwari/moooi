@@ -30,6 +30,11 @@ header h3 {
     justify-content: center;
 }
 
+.moooi a {
+    /* color: white; */
+    text-decoration: none;
+}
+
 .rightHead {
     width: 33.33%;
     display: flex;
