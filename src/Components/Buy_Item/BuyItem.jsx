@@ -1,8 +1,16 @@
 import React from "react";
 import "./BuyItem.css";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cartSlice/cartSlice";
 const BuyItem = ({ src, title, price, available }) => {
-  console.log(title);
+  // console.log(title);
+  //useDispatch() hook is used to add/remove the element from cart
+  const dispatch = useDispatch();
+  const addHandler = (item) => {
+    dispatch(addToCart(item));
+  };
+
   return (
     <div className="buyItems">
       <div className="buyCart">
@@ -16,7 +24,19 @@ const BuyItem = ({ src, title, price, available }) => {
             <p>{available}</p>
           </div>
           <div className="prodButton">
-            <button>Buy</button>
+            <button
+              onClick={() =>
+                addHandler({
+                  src,
+                  title,
+                  price,
+                  available,
+                  quantity: 1,
+                })
+              }
+            >
+              Buy
+            </button>
           </div>
         </div>
       </div>

@@ -1,11 +1,19 @@
 .bag {
     background-color: rgb(226, 221, 221);
     position: fixed;
-    width: 460px;
-    height: 530px;
+    width: 510px;
+    /* height: 560px; */
+    min-height: 40vh;
     right: 10px;
     top: 70px;
     /* margin-top: -50px; */
+}
+
+.bagProducts {
+    max-height: 300px;
+    /* Set the maximum height of the bag content */
+    overflow-y: auto;
+    /* Add vertical scrollbar if content exceeds the maximum height */
 }
 
 .closeBag {

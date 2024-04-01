@@ -48,7 +48,7 @@ function Collection() {
           <Link to={item.title} key={index}>
             <div className="collectioncart" key={index}>
               <div className="collectionImg">
-                <img key={item.id} src={item.src} alt={item.alt} />
+                <img src={item.src} alt={item.alt} />
               </div>
               <div className="collectionTitle">{item.title}</div>
             </div>

@@ -5,10 +5,43 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbTruckReturn } from "react-icons/tb";
 import { GiCircleCage } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
+import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import {
+  removeFromCart,
+  updateQuantityByTitle,
+} from "../../features/cartSlice/cartSlice";
+
 const ViewBag = () => {
+  const dispatch = useDispatch();
+  const cartItem = useSelector((state) => state.cart.items);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  console.log(cartItem);
+
+  const [subtotals, setSubtotals] = useState({});
+
+  useEffect(() => {
+    // Calculate subtotals for each item
+    const newSubtotals = {};
+    cartItem.forEach((item) => {
+      const subtotal = item.quantity * parseFloat(item.price.slice(1));
+      newSubtotals[item.title] = subtotal;
+    });
+    setSubtotals(newSubtotals);
+  }, [cartItem]);
+
+  const handleQuantityChange = (event, title) => {
+    const newQuantity = parseInt(event.target.value); // Convert string to number
+    const productTitle = title; // Replace with the actual product title or get it from your component's state
+    dispatch(updateQuantityByTitle({ title: productTitle, newQuantity }));
+  };
+  const deleteHandler = (item) => {
+    dispatch(removeFromCart(item));
+  };
   // Generate array for displying numbers in dropdowm
   const options = [];
-  for (let i = 1; i <= 500; i++) {
+  for (let i = 1; i <= 10; i++) {
     options.push(i);
   }
   return (
@@ -31,38 +64,55 @@ const ViewBag = () => {
       <div className="orderDetails">
         <div className="shoppingBag">
           <h1>Shopping bag</h1>
-          <div className="shoppingContent">
-            <div className="left">
-              <img
-                src="https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FBed%20Scarf%2FMenagerie%2Fimage-thumb__51143__header_fullscreen_2x_jpg%2F6934-MO-Menagerie-of-Extinct-Animals-Raven-XL-Scarf.webp&w=1080&q=80"
-                alt="Product Image"
-              />
-            </div>
-            <div className="right">
-              <div className="title">
-                Menagerie of Extinct Animals Bed Scarf XL
+          {cartItem.map(({ src, price, available, title, quantity }, index) => (
+            <div className="shoppingContent">
+              <div className="left">
+                <img src={src} alt="Product Image" />
               </div>
-              <div className="prodDetails">
-                <div className="details">
-                  <div className="counting">
-                    <select className="dropdown">
-                      {options.map((item) => (
-                        <option key={item} value={item}>
-                          {item}
-                        </option>
-                      ))}
-                    </select>
+              <div className="right">
+                <div className="title">
+                  {quantity}
+                  <RxCross2 className="multiplyIcon" /> {title}
+                </div>
+                <div className="prodDetails">
+                  <div className="details">
+                    <div className="counting">
+                      <select
+                        className="dropdown"
+                        onChange={(e) => handleQuantityChange(e, title)}
+                        value={quantity}
+                      >
+                        {options.map((item) => (
+                          <option key={item} value={item}>
+                            {item}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <button
+                        className="delete"
+                        onClick={() =>
+                          deleteHandler({
+                            src,
+                            price,
+                            available,
+                            title,
+                          })
+                        }
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
-                  <div>
-                    <button className="delete">Delete</button>
+                  <div className="ProductPrice">
+                    {/* <p> ${quantity * price.slice(1)}</p> */}
+                    <p>${subtotals[title]}</p>
                   </div>
                 </div>
-                <div className="ProductPrice">
-                  <p>299.00 USD</p>
-                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
         <div className="orderSummary">
           <div className="heading">
@@ -71,7 +121,9 @@ const ViewBag = () => {
           <div className="sub_Total">
             <div className="subTotalTop">
               <div className="orderHead">SubTotal</div>
-              <div className="subTotalPrice">299.00 USD</div>
+              <div className="subTotalPrice">
+                ${Object.values(subtotals).reduce((acc, curr) => acc + curr, 0)}
+              </div>
             </div>
             <div className="subTotalBottom">
               <div className="shipping">Shipping</div>
@@ -81,7 +133,9 @@ const ViewBag = () => {
           <div className="overall">
             <div className="totalPrice">
               <div className="head">Total</div>
-              <div className="price">299.00 USD</div>
+              <div className="price">
+                ${Object.values(subtotals).reduce((acc, curr) => acc + curr, 0)}
+              </div>
             </div>
             <div className="checkOut">
               <button>Go to Checkout</button>

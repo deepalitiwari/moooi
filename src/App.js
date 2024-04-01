@@ -40,7 +40,7 @@ import {
   bodyBeautybottomArea,
 } from "./Components/Items/data6";
 import ProductDetail from "./Components/Product_Details/ProductDetail";
-import BuyItem from "./Components/Buy_Item/BuyItem";
+// import BuyItem from "./Components/Buy_Item/BuyItem";
 import ProductStories from "./Components/Product_Stories/ProductStories";
 import Contact from "./Components/Contact/Contact";
 import { useState } from "react";

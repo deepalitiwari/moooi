@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import "./Bag.css";
 import { IoMdSearch, IoMdClose } from "react-icons/io";
-import { HiOutlineViewBoards } from "react-icons/hi";
-import { MdOutlineShoppingBag } from "react-icons/md";
+// import { HiOutlineViewBoards } from "react-icons/hi";
+// import { MdOutlineShoppingBag } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Bag = ({ toogleBag }) => {
+const Bag = ({ toogleBag, quantity }) => {
   // const [isbg, setIsbg] = useState(false);
   // function toogleBg() {
   //   setIsbg(!isbg);
   //   console.log(isbg);
   // }
+  const cartItem = useSelector((state) => state.cart.items);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  console.log("CART", totalPrice);
+
   return (
     <div className="bag">
       {/* <div className="icons">
@@ -25,28 +31,36 @@ const Bag = ({ toogleBag }) => {
             <IoMdClose onClick={toogleBag} />
           </div>
         </div>
-        <div className="product_Details">
-          <div className="image">
-            <img
-              src="https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FBed%20Scarf%2FMenagerie%2Fimage-thumb__51143__header_fullscreen_2x_jpg%2F6934-MO-Menagerie-of-Extinct-Animals-Raven-XL-Scarf.webp&w=1080&q=80"
-              alt="product Image"
-            />
-          </div>
-          <div className="data">Menagerie of Extinct Animals Bed Scarf XL</div>
-          <div className="price">269.00 USD </div>
+        <div className="bagProducts">
+          {cartItem.map(({ src, price, available, title, quantity }, index) => (
+            <div className="product_Details" key={index}>
+              <div className="image">
+                <img src={src} />
+              </div>
+              <div className="data">
+                {quantity} <RxCross2 className="mulitplyIcon" /> {title}
+              </div>
+              <div className="price">{price}USD </div>
+            </div>
+          ))}
         </div>
-
         <div className="bottom">
           <div className="subTotal">
             <div className="total">SubTotal</div>
-            <div className="TotalPrice">1375.00 USD</div>
+            <div className="TotalPrice">${totalPrice} USD</div>
           </div>
           <div className="buttons">
             <Link to="/viewBag">
-              <button className="viewBag">View Bag</button>
+              <button className="viewBag" onClick={toogleBag}>
+                View Bag
+              </button>
             </Link>
 
-            <button className="checkOut">Checkout</button>
+            <Link to="/viewBag">
+              <button className="checkOut" onClick={toogleBag}>
+                Checkout
+              </button>
+            </Link>
           </div>
         </div>
       </div>

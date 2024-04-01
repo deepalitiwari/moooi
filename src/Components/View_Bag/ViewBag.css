@@ -57,6 +57,14 @@
 
  .shoppingContent .right .title {
      padding: 30px 0;
+     display: flex;
+     justify-content: flex-start;
+     text-align: center;
+ }
+
+ .multiplyIcon {
+     font-size: 22px;
+
  }
 
  .prodDetails {
