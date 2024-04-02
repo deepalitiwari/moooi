@@ -1,6 +1,16 @@
 import React from "react";
 import "./DesignDreams.css";
-function DesignDream({ h3, src, children, style, direction, textColor }) {
+import { Link } from "react-router-dom";
+function DesignDream({
+  h3,
+  src,
+  children,
+  style,
+  direction,
+  textColor,
+  btn,
+  link,
+}) {
   console.log(style);
   return (
     <div className="DesignDream" style={{ flexDirection: direction }}>
@@ -10,6 +20,10 @@ function DesignDream({ h3, src, children, style, direction, textColor }) {
       >
         <h3>{h3}</h3>
         <h1>{children}</h1>
+        <Link to={link}>
+        <button>{btn}</button>
+        </Link>
+   
       </div>
       <div className="Dream-image">
         <img src={src} alt="img" />

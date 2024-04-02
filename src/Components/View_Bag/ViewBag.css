@@ -10,6 +10,13 @@
      color: black;
  }
 
+ .viewBag .empty h1 {
+     padding: 60px 0 10px;
+     text-align: center;
+     font-size: 55px;
+     font-weight: 300;
+ }
+
  .orderDetails {
      display: flex;
      justify-content: space-between;
@@ -225,5 +232,9 @@
      .shippingIcons {
          font-size: 30px;
      }
+
+     /* .viewBag h1 {
+         font-size: 40px;
+     } */
 
  }

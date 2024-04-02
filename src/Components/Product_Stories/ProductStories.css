@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    /* backdrop-filter: blur(5px); */
 }
 
 .ProductStories {
@@ -11,13 +12,14 @@
     flex-direction: column;
     background-color: #2f2f2f;
     color: rgb(247, 242, 242);
-    width: 20%;
-    padding: 70px;
+    width: 12%;
+    padding: 78px 48px;
     border-radius: 15px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 .ProductStories .heading {

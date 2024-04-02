@@ -6,6 +6,7 @@ export let data = [
     style: " #4C363A",
     textColor: "white",
     direction: "row",
+    link:"#"
   },
   {
     h3: "Product Story",
@@ -14,6 +15,9 @@ export let data = [
     style: "#E3D9C6",
     textColor: "black",
     direction: "row-reverse",
+    btn: "Discover the Hana Chair family",
+    link:"#"
+     
   },
   {
     h3: "Moooi Presents",
@@ -22,5 +26,7 @@ export let data = [
     style: "#F3F3F3",
     textColor: "black",
     direction: "row",
+    btn: "Discover this room Fragnance",
+    link:"#"
   },
 ];

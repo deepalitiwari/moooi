@@ -9,7 +9,7 @@ const initialState = {
 function totalCalculatePrice(state) {
   let amount = 0;
   state.items.forEach((element) => {
-    amount = Number(element.price.slice(1)) + amount;
+    amount = Number(element.price.slice(1)) * element.quantity + amount;
   });
   state.totalPrice = amount;
 }
@@ -39,7 +39,10 @@ const cartSlice = createSlice({
       const itemToUpdate = state.items.find((item) => item.title === title);
       if (itemToUpdate && newQuantity > 0) {
         itemToUpdate.quantity = newQuantity;
-        // totalCalculatePrice(state);
+        // console.log(newQuantity, Number(itemToUpdate.price.slice(1)));
+        itemToUpdate.subtotal =
+          newQuantity * Number(itemToUpdate.price.slice(1));
+        totalCalculatePrice(state);
       }
     },
   },

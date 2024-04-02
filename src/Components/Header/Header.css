@@ -11,11 +11,20 @@ header {
     cursor: pointer;
 }
 
-header h3 {
+.header__fix {
+    position: fixed;
+    top: 0px;
+}
+
+.header__realative {
+    position: relative;
+}
+
+header .moooi h3 {
     margin: 0;
     font-size: 35px;
-    font-weight: 450px;
-    letter-spacing: 10px;
+    font-weight: 400px;
+    letter-spacing: 14px;
 }
 
 .leftHead {
@@ -37,9 +46,17 @@ header h3 {
 
 .rightHead {
     width: 33.33%;
+    height: 3rem;
     display: flex;
     justify-content: flex-end;
     gap: 30px;
+    line-height: 2rem;
+    align-items: center;
+}
+.hoverOn:hover{
+    background-color: rgb(162, 156, 156);
+    border-radius: 30px;
+    padding: 5px;
 }
 
 @media (max-width:576px) {

@@ -20,6 +20,23 @@
     padding: 0px 550px;
 }
 
+.contactButton button {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px;
+    border-radius: 30px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+.contactIcons {
+    font-size: 18px;
+}
+
+.contactButton span {
+    padding: 8px;
+}
+
 .stores h1 {
     text-align: center;
     font-size: 72px;
@@ -52,7 +69,7 @@
 }
 
 .ContactImages {
-    width: 460px;
+    width: 610px;
 }
 
 .contactTitle {
@@ -70,12 +87,7 @@
     padding: 30px;
 }
 
-.infoCart {
-    width: 500px;
-    /* min-width: 100%;
-    min-height: 100%; */
-    /* width: 70px; */
-}
+
 
 .bottom {
     padding: 60px;
@@ -91,6 +103,10 @@
     font-size: 25px;
     color: gray;
     text-align: center;
+}
+
+.infoCart {
+    width: 500px;
 }
 
 .InfoCarts {
@@ -114,14 +130,13 @@
     padding-bottom: 50px;
 }
 
-@media(max-width:576px) {
+@media(max-width:520px) {
     .Contact .top h1 {
         font-size: 50px;
     }
 
     .Contact .top .para {
         font-size: 20px;
-
         padding: 0px;
     }
 
@@ -129,5 +144,43 @@
         text-align: center;
         font-size: 42px;
         font-weight: 400;
+    }
+
+    .stores {
+        display: none;
+    }
+
+    .bottom {
+        padding: 10px;
+    }
+
+    .bottom h1 {
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .bottom .para {
+        font-size: 17px;
+    }
+
+    .infoCart h3 {
+        font-size: 20px;
+    }
+
+    .infoCart p {
+        font-size: 14px;
+    }
+
+
+}
+
+@media(min-width:520px) and (max-width:1250px) {
+    .stores {
+        display: none;
+    }
+
+    .Contact .top .para {
+        font-size: 20px;
+        padding: 0px;
     }
 }

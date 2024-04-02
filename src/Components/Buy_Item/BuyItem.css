@@ -4,7 +4,7 @@
     position: fixed;
     right: 10px;
     bottom: -400px;
-    background-color: aliceblue;
+    background-color: rgb(252, 249, 249);;
 }
 
 .buyItems:hover {

@@ -32,6 +32,7 @@ const BuyItem = ({ src, title, price, available }) => {
                   price,
                   available,
                   quantity: 1,
+                  subtotal: price,
                 })
               }
             >
@@ -43,7 +44,7 @@ const BuyItem = ({ src, title, price, available }) => {
       <div className="dimension">
         <div className="prodContent">
           <div className="head">
-            <h3>Dimension</h3>
+            {/* <h3>Dimension</h3> */}
           </div>
           {/* <div className="icon">
             <IoIosArrowUp />

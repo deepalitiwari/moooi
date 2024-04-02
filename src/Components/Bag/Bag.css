@@ -1,12 +1,12 @@
 .bag {
-    background-color: rgb(226, 221, 221);
+    background-color: rgb(252, 249, 249);
     position: fixed;
-    width: 510px;
-    /* height: 560px; */
+    width: 30%;
     min-height: 40vh;
     right: 10px;
     top: 70px;
-    /* margin-top: -50px; */
+    box-sizing: border-box;
+    border-radius: 12px;
 }
 
 .bagProducts {
@@ -14,6 +14,22 @@
     /* Set the maximum height of the bag content */
     overflow-y: auto;
     /* Add vertical scrollbar if content exceeds the maximum height */
+}
+
+.emptyCart {
+    padding: 50px 0px;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.emptyCart h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.emptyCart p {
+    font-weight: 300;
+    font-size: 22px;
 }
 
 .closeBag {
@@ -111,4 +127,35 @@
 .buttons .checkOut {
     background-color: black;
     color: white;
+}
+
+
+@media(min-width:780px) and (max-width:1250px) {
+    .bag {
+        width: 50%;
+        /* min-height: 40vh; */
+        right: 10px;
+        top: 70px;
+    }
+}
+
+@media(min-width:610px) and (max-width:780px) {
+    .bag {
+        width: 70%;
+        right: 10px;
+    }
+
+    .bottom .buttons button {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width:300px) and (max-width:610px) {
+    .bag {
+        width: 96%;
+    }
+
+    .bottom .buttons button {
+        font-size: 1rem;
+    }
 }

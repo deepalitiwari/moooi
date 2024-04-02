@@ -56,6 +56,22 @@ function App() {
     <div className="App">
       {show ? <ProductStories /> : null}
       <Routes>
+        <Route
+          path="/products/:type/:index"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <ProductDetail />
+              <Menu handleMenu={handleMenu} />
+              <Footer />
+            </>
+          }
+        />
         <Route path="/*" element={<h1>Not found</h1>} />
         <Route
           path="/Bedding & Bath"
@@ -77,9 +93,8 @@ function App() {
             </>
           }
         />
-
         <Route
-          path="/products/:type/:index"
+          path="/viewBag/Bedding & Bath"
           element={
             <>
               <Header
@@ -88,15 +103,38 @@ function App() {
                 leftHeader={"none"}
                 moooi={"start"}
               />
-              <ProductDetail />
+              <Item
+                data={beddingBath}
+                dataHead={beddingBathHead}
+                bottom={bottomArea}
+              />
               <Menu handleMenu={handleMenu} />
               <Footer />
             </>
           }
         />
-        <Route path="/*" element={<h1>Not found</h1>} />
         <Route
           path="/Furniture"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <Item
+                data={furniture}
+                dataHead={furnitureHead}
+                bottom={furniturebottomArea}
+              />
+              <Menu handleMenu={handleMenu} />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/viewBag/Furniture"
           element={
             <>
               <Header
@@ -136,7 +174,47 @@ function App() {
           }
         />
         <Route
+          path="/viewBag/Lighting"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <Item
+                data={lighting}
+                dataHead={lightingHead}
+                bottom={lightingbottomArea}
+              />
+              <Menu handleMenu={handleMenu} />
+              <Footer />
+            </>
+          }
+        />
+        <Route
           path="Home Accessories"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <Item
+                data={homeAccessories}
+                dataHead={homeAccessoriesHead}
+                bottom={homeAccessoriesbottomArea}
+              />
+              <Menu handleMenu={handleMenu} />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/viewBag/Home Accessories"
           element={
             <>
               <Header
@@ -176,7 +254,47 @@ function App() {
           }
         />
         <Route
+          path="/viewBag/Wall & Floor"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <Item
+                data={wallFloor}
+                dataHead={wallFloorHead}
+                bottom={wallFloorbottomArea}
+              />
+              <Menu handleMenu={handleMenu} />
+              <Footer />
+            </>
+          }
+        />
+        <Route
           path="/Body & Beauty"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <Item
+                data={bodyBeauty}
+                dataHead={bodyBeautyHead}
+                bottom={bodyBeautybottomArea}
+              />
+              <Menu handleMenu={handleMenu} />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/viewBag/Body & Beauty"
           element={
             <>
               <Header
@@ -237,28 +355,23 @@ function App() {
               <Main />
               <Menu handleMenu={handleMenu} />
               <Collection />
-              {data.map(
-                ({ h3, src, children, direction, style, textColor }, index) => {
+             <div className="repeate">
+             {data.map(
+                (
+                  {h3,src,children,direction,style,textColor, navigation,btn,link},index) => {
                   return (
-                    <DesignDream
-                      h3={h3}
-                      src={src}
-                      style={style}
-                      children={children}
-                      direction={direction}
-                      textColor={textColor}
-                      key={index}
-                    />
+                    <DesignDream h3={h3} src={src} style={style} children={children} direction={direction} textColor={textColor} navigation={navigation} btn={btn} link={link} key={index} />
                   );
                 }
               )}
+             </div>
               <Strategy />
               <DesignDream
                 h3="Design Dream"
                 src="https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FWeb-Items%2FStories%2FPodcasts%2Fimage-thumb__62604__header_fullscreen_2x%2FPodcast_Design_Dreams_Mobile_Phone_Walking_In_Clouds.png&w=1080&q=80"
                 direction="row-reverse"
-                style="#4C363A;
-        "
+                style="#4C363A;"
+                btn="listen now"
               >
                 Moooi Through the Eyes of Rebelo de Andrade Architecture
               </DesignDream>
@@ -267,33 +380,6 @@ function App() {
           }
         />
       </Routes>
-
-      {/* <Item data={beddingBath} dataHead={beddingBathHead} bottom={bottomArea} />
-      <Item
-        data={furniture}
-        dataHead={furnitureHead}
-        bottom={furniturebottomArea}
-      />
-      <Item
-        data={lighting}
-        dataHead={lightingHead}
-        bottom={lightingbottomArea}
-      />
-      <Item
-        data={homeAccessories}
-        dataHead={homeAccessoriesHead}
-        bottom={homeAccessoriesbottomArea}
-      />
-      <Item
-        data={wallFloor}
-        dataHead={wallFloorHead}
-        bottom={wallFloorbottomArea}
-      />
-      <Item
-        data={bodyBeauty}
-        dataHead={bodyBeautyHead}
-        bottom={bodyBeautybottomArea}
-      /> */}
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import "./Contact.css";
 import { IoLocationSharp, IoCall } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoIosChatboxes } from "react-icons/io";
 const Contact = () => {
   const ContactAddress = [
     {
@@ -68,6 +69,16 @@ const Contact = () => {
           Do you want to know more regarding Moooi or our products? We’d be
           happy to hear from you!
         </p>
+        <div className="contactButton">
+          <button>
+            <MdOutlineEmail className="contactIcons" />
+            <span> Send us an email</span>
+          </button>
+          <button>
+            <IoIosChatboxes className="contactIcons" />
+            <span>Chat with us</span>
+          </button>
+        </div>
       </div>
       <div className="stores">
         <h1>Moooi Stores & Brand Store</h1>
@@ -100,7 +111,7 @@ const Contact = () => {
                     {item.mobile}
                   </p>
                   <p>
-                    <MdEmail />
+                    <MdOutlineEmail />
                     {item.mail}
                   </p>
                 </div>
