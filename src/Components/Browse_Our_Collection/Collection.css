@@ -53,3 +53,20 @@
     text-decoration: none;
     text-decoration: none;
 }
+@media(max-width:1024px){
+    .collectioncart img  {
+        background-color: rgb(241, 241, 238);
+        /* width: 200px; */
+        width: 250px;
+    }
+
+    .collectionTitle{
+        background-color: rgb(241, 241, 238);
+        width: 96%;
+        text-align: center;
+        padding: 0 0 10px;
+    }
+    .collectioncart:hover{
+        background-color: transparent;
+    }
+}

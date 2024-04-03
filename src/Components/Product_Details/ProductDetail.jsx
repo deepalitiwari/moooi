@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ProductDetail.css";
-import {
-  MdOutlineFileDownload,
-  MdOutlineShare,
-  MdOutlineDashboard,
-  MdOutlineLocalShipping,
-} from "react-icons/md";
+import {MdOutlineFileDownload, MdOutlineShare, MdOutlineDashboard, MdOutlineLocalShipping,} from "react-icons/md";
 import { TbTruckReturn } from "react-icons/tb";
 import { GiCircleCage } from "react-icons/gi";
 import { useParams } from "react-router-dom";
@@ -19,18 +14,13 @@ import BuyItem from "../Buy_Item/BuyItem";
 const ProductDetail = () => {
   const { type, index } = useParams();
   const [prodData, setData] = useState({});
-  console.log(type, index);
-  let myData = [
-    beddingBath,
-    furniture,
-    lighting,
-    homeAccessories,
-    wallFloor,
-    bodyBeauty,
-  ];
+
+  let myData = [beddingBath, furniture, lighting, homeAccessories, wallFloor, bodyBeauty];
+
   useEffect(() => {
     console.log(prodData);
   }, [prodData]);
+
   useEffect(() => {
     myData.forEach(
       (item, i) => {
@@ -48,11 +38,7 @@ const ProductDetail = () => {
   return (
     <div className="productDetails">
       <div className="productImg">
-        <img
-          src={prodData.src}
-          // src="https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FBed%20Scarf%2Fimage-thumb__56318__header_fullscreen_2x_jpg%2FMenagerie%20XL%20Scarf_Raven-10_Topshot.webp&w=1920&q=80"
-          alt="Product Image"
-        />
+        <img src={prodData.src} alt="Product Image"/>
       </div>
       <div className="productData">
         <BuyItem
@@ -67,10 +53,7 @@ const ProductDetail = () => {
           <div className="leftContent">
             <div className="para">
               <p>
-                Elevate your space with our exquisite product, {prodData.title},
-                crafted to perfection. Whether it's for {prodData.type}, our
-                product promises to captivate your senses and redefine your
-                ambiance.
+                Elevate your space with our exquisite product, {prodData.title},crafted to perfection. Whether it's for {prodData.type}, our product promises to captivate your senses and redefine your ambiance.
               </p>
               <a>Read more</a>
             </div>
@@ -109,9 +92,7 @@ const ProductDetail = () => {
       <div className="suggestion">
         <h1 className="heading">our suggestions</h1>
         <p className="para">
-          At Moooi, we prioritize your satisfaction and convenience. Explore our
-          extensive range of customer-centric policies crafted to elevate your
-          shopping experience:
+          At Moooi, we prioritize your satisfaction and convenience. Explore our extensive range of customer-centric policies crafted to elevate your shopping experience:
         </p>
       </div>
       <div className="policies">
@@ -127,8 +108,7 @@ const ProductDetail = () => {
           <div className="innerPolicy">
             <h1>Easy Return Within 100 Days</h1>
             <p>
-              If you're not in love with our product you may return within 100
-              days of receipt without given reasons.
+              If you're not in love with our product you may return within 100 days of receipt without given reasons.
             </p>
             <a>Return Policy</a>
           </div>
@@ -137,9 +117,7 @@ const ProductDetail = () => {
           <GiCircleCage className="productIcons" />
           <h1>5 Years Warranty after Registraion</h1>
           <p>
-            All our lighting and furniture products come with The Button. Tap it
-            to check authenticity and register your product to get extended
-            warranty.
+            All our lighting and furniture products come with The Button. Tap it to check authenticity and register your product to get extended warranty.
           </p>
           <a>The Button</a>
         </div>

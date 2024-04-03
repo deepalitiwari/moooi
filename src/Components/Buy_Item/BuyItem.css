@@ -1,9 +1,9 @@
 .buyItems {
     width: 430px;
-    height: 500px;
+    height: 400px;
     position: fixed;
     right: 10px;
-    bottom: -400px;
+    bottom: -300px;
     background-color: rgb(252, 249, 249);;
 }
 
@@ -66,18 +66,6 @@
     width: 80px;
     height: 2.5rem;
     font-size: 18px;
-}
-
-.prodContent {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.prodContent h3 {
-    justify-content: center;
-
 }
 
 .dimensionImg {

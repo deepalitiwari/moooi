@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import "./Bag.css";
-import { IoMdSearch, IoMdClose } from "react-icons/io";
-// import { HiOutlineViewBoards } from "react-icons/hi";
-// import { MdOutlineShoppingBag } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Bag = ({ toogleBag, quantity }) => {
+const Bag = ({ toogleBag}) => {
   const cartItem = useSelector((state) => state.cart.items);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  console.log("CART", totalPrice);
 
   const isEmptyCart = cartItem.length === 0;
   return (
@@ -29,8 +26,7 @@ const Bag = ({ toogleBag, quantity }) => {
           </div>
         ) : (
           <div className="bagProducts">
-            {cartItem.map(
-              ({ src, price, available, title, quantity, subtotal }, index) => (
+            {cartItem.map(({ src, price, available, title, quantity, subtotal }, index) => (
                 <div className="product_Details" key={index}>
                   <div className="image">
                     <img src={src} />

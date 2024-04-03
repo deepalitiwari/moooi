@@ -5,14 +5,12 @@ import { MdOutlineManageSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function Item({ dataHead, data, bottom }) {
-  //   console.log("DATA", dataHead);
   return (
     <div className="items">
       <div className="main">
         <h1 className="heading">{dataHead.name}</h1>
         <p className="para">
-          Our collection contains work from emerging talent and internationally
-          recognized designers. Together, we create A Life Extraordinary.
+          Our collection contains work from emerging talent and internationally recognized designers. Together, we create A Life Extraordinary.
         </p>
         <div className="buttons">
           <div className="item-btn">
@@ -35,12 +33,7 @@ function Item({ dataHead, data, bottom }) {
           <Link to={`/products/${item.type}/${index}`}>
             <div className="cart" key={index}>
               <div className="cartImg">
-                <img
-                  key={item.id}
-                  src={item.src}
-                  alt={item.alt}
-                  title={item.title}
-                />
+                <img key={item.id} src={item.src} alt={item.alt} title={item.title}/>
               </div>
               <div className="cartTitle">{item.title}</div>
               <div className="cartPrice">{item.price}</div>

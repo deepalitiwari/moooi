@@ -1,0 +1,72 @@
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: min(340px, 90%);
+    height: 50vh;
+    left: 50%;
+    top: 44%;
+    border-radius: 15px;
+    background: Linear-gradient(270deg, #21212199 14.44%, #46454399 93.61%), #000;
+    color: #fff;
+    padding: 2.7777777778vw 1.3888888889vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.loginHead h3 {
+    font-size: 40px ;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+.loginContainer p {
+    color: #9c9c9c;
+    padding: 10px 27px 0;
+}
+.loginContainer form {
+    width: 100%;
+}
+.loginfields {
+    background: #ffffff0d;
+    border: 1px solid #0000;
+    margin: 15px;
+    padding: .8em 1.125rem .775em;
+    text-align: left;
+}
+.loginfields input {
+    background-color: initial;
+    border: none;
+    color: #fff;
+    width: 100%;
+}
+.loginfields label {
+    color: #b9b9b9;
+    display: block;
+    font-size: 14px;
+}
+.loginfields input:focus {
+    font-size: medium;
+    outline: none;
+}
+.loginContainer button {
+    background: #0000;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+}
+.loginBottom {
+    display: flex;
+    flex-direction: column;
+    font-family: Jaldi, sans-serif;
+    font-size: 16px;
+    padding-top: 25px;
+}
+.loginBottom button{
+    border: none;
+    color: #4da22e;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+}

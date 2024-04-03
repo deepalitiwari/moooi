@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductStories.css";
 import { Link } from "react-router-dom";
 
-const ProductStories = () => {
+
+const ProductStories = ({handleMenu}) => {
+  const handleClick = () => {
+    handleMenu(); // Close the menu
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return (
     <div className="MenuContiner">
       <div className="ProductStories">
@@ -12,16 +17,19 @@ const ProductStories = () => {
         <div className="Stories_content">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleClick}> Home</Link>
             </li>
             <li>
-              <Link to="/about">About us</Link>
+              <Link to="/about" onClick={handleClick}>About us</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login" onClick={handleClick}>Login</Link>
             </li>
             <li>
-              <Link to="contact">Contact</Link>
+              <Link to="/signUp" onClick={handleClick}>Sign Up</Link>
+            </li>
+            <li>
+              <Link to="contact" onClick={handleClick}>Contact</Link>
             </li>
           </ul>
         </div>

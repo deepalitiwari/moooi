@@ -18,7 +18,7 @@ export const bodyBeauty = [
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FMemento%20Moooi%20Medley%20Scarf%2Fimage-thumb__48093__header_fullscreen_2x_jpg%2FMemento-Moooi-Medley-Scarf.webp&w=1080&q=80",
     alt: "Memento Moooi Medley Scarf",
     title: "Memento Moooi Medley Scarf",
-    // price: "$2441",
+    price: "$241",
     available: "In stock",
     type: "bodyBeauty",
   },

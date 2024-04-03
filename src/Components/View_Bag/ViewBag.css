@@ -3,6 +3,8 @@
      justify-content: center;
      text-align: center;
      list-style-type: none;
+     text-transform: uppercase;
+     font-size: 16px;
  }
 
  .viewBag .top a {

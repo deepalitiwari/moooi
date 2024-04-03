@@ -3,6 +3,8 @@ import "./Contact.css";
 import { IoLocationSharp, IoCall } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoIosChatboxes } from "react-icons/io";
+import { IoMdArrowDropright } from "react-icons/io";
+import { Link } from "react-router-dom";
 const Contact = () => {
   const ContactAddress = [
     {
@@ -63,11 +65,23 @@ const Contact = () => {
   ];
   return (
     <div className="Contact">
+       <div className="contactTop">
+        <div>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+        </div>
+        <div>
+          <li> <IoMdArrowDropright /> </li>
+        </div>
+        <div>
+          <li>Shopping Bag</li>
+        </div>
+      </div>
       <div className="top">
         <h1>Contact</h1>
         <p className="para">
-          Do you want to know more regarding Moooi or our products? We’d be
-          happy to hear from you!
+          Do you want to know more regarding Moooi or our products? We’d be happy to hear from you!
         </p>
         <div className="contactButton">
           <button>
@@ -100,20 +114,11 @@ const Contact = () => {
           <div className="InfoCarts">
             {ContactInfo.map((item, index) => (
               <div className="infoCart" key={index}>
-                <div className="">
+                <div className="details">
                   <h3>{item.heading}</h3>
-                  <p>
-                    <IoLocationSharp />
-                    {item.address}
-                  </p>
-                  <p>
-                    <IoCall />
-                    {item.mobile}
-                  </p>
-                  <p>
-                    <MdOutlineEmail />
-                    {item.mail}
-                  </p>
+                  <p> <IoLocationSharp /> {item.address} </p>
+                  <p> <IoCall /> {item.mobile} </p>
+                  <p> <MdOutlineEmail /> {item.mail} </p>
                 </div>
               </div>
             ))}

@@ -9,52 +9,41 @@ import Menu from "./Components/Menu/Menu";
 import Strategy from "./Components/Strategy/Strategy";
 import { data } from "./data";
 import { Routes, Route } from "react-router-dom";
-import {
-  beddingBath,
-  beddingBathHead,
-  bottomArea,
-} from "./Components/Items/data1";
-import {
-  furniture,
-  furnitureHead,
-  furniturebottomArea,
-} from "./Components/Items/data2";
-import {
-  lighting,
-  lightingHead,
-  lightingbottomArea,
-} from "./Components/Items/data3";
-import {
-  homeAccessories,
-  homeAccessoriesHead,
-  homeAccessoriesbottomArea,
-} from "./Components/Items/data4";
-import {
-  wallFloor,
-  wallFloorHead,
-  wallFloorbottomArea,
-} from "./Components/Items/data5";
-import {
-  bodyBeauty,
-  bodyBeautyHead,
-  bodyBeautybottomArea,
-} from "./Components/Items/data6";
+import {beddingBath, beddingBathHead, bottomArea} from "./Components/Items/data1";
+import {furniture, furnitureHead, furniturebottomArea} from "./Components/Items/data2";
+import {lighting, lightingHead, lightingbottomArea} from "./Components/Items/data3";
+import {homeAccessories,homeAccessoriesHead,homeAccessoriesbottomArea} from "./Components/Items/data4";
+import {wallFloor, wallFloorHead, wallFloorbottomArea} from "./Components/Items/data5";
+import {bodyBeauty, bodyBeautyHead, bodyBeautybottomArea} from "./Components/Items/data6";
 import ProductDetail from "./Components/Product_Details/ProductDetail";
-// import BuyItem from "./Components/Buy_Item/BuyItem";
 import ProductStories from "./Components/Product_Stories/ProductStories";
 import Contact from "./Components/Contact/Contact";
 import { useState } from "react";
 import ViewBag from "./Components/View_Bag/ViewBag";
+import Login from "./Components/Login/Login";
 
 function App() {
   const [show, setShow] = useState(false);
+  // const[menu, setMenu] = useState(false);
+  const [showLogin, setshowLogin] = useState(false);
+
   const handleMenu = () => {
     setShow(!show);
   };
 
+  function handleShow(){
+    setShow(!show);
+    setshowLogin(false)
+  }
+  function handleLogin(){
+    setshowLogin(true);
+    setShow(false);
+  }
+
   return (
     <div className="App">
-      {show ? <ProductStories /> : null}
+      {show ? <ProductStories handleMenu={handleMenu} handleLogin={handleLogin}/> : null}
+      {showLogin && <Login/>}
       <Routes>
         <Route
           path="/products/:type/:index"
@@ -326,6 +315,22 @@ function App() {
               <Menu handleMenu={handleMenu} />
               <Contact />
               <Footer />
+            </>
+          }
+        ></Route>
+         <Route
+          path="/login"
+          element={
+            <>
+              <Header
+                textColor={"#000"}
+                backgroundColor={"#fff"}
+                leftHeader={"none"}
+                moooi={"start"}
+              />
+              <Menu handleMenu={handleMenu} />
+              <Login />
+              {/* <Footer /> */}
             </>
           }
         ></Route>

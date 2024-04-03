@@ -4,20 +4,53 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 25px 30px;
     font-size: 25px;
     box-sizing: border-box;
     /* position: relative; */
     cursor: pointer;
 }
-
+/* Header.css */
+/* .bagQuantity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(191, 76, 76);
+    color: white;
+    font-size: 12px; 
+    padding: 4px 8px;
+    border-radius: 50%; 
+  } */
+  
+  .shopingBagdiv{
+    position: relative;
+  }
+  .shopingQnty{
+    position: absolute;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e3d9c6;
+    font-size: 16px;
+    font-weight: 600;
+    top:0;
+    right: -2px;
+  }
 .header__fix {
     position: fixed;
     top: 0px;
+    transition: all 0.6s ease-in-out;
 }
 
 .header__realative {
     position: relative;
+    transition: all 0.6s ease-in-out;
+
 }
 
 header .moooi h3 {
@@ -53,10 +86,15 @@ header .moooi h3 {
     line-height: 2rem;
     align-items: center;
 }
+.hoverOn {
+    /* Add padding to the non-hover state */
+    padding: 4px 7px;
+}
+
 .hoverOn:hover{
-    background-color: rgb(162, 156, 156);
-    border-radius: 30px;
-    padding: 5px;
+    background-color: rgb(162, 152, 152);
+    border-radius: 80px;
+    /* padding: 5px; */
 }
 
 @media (max-width:576px) {
