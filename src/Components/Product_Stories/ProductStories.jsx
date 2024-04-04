@@ -1,15 +1,31 @@
 import React, { useState } from "react";
 import "./ProductStories.css";
 import { Link } from "react-router-dom";
+import { IoMdSearch } from "react-icons/io";
+import { MdOutlineMicNone } from "react-icons/md";
 
-
-const ProductStories = ({handleMenu}) => {
-  const handleClick = () => {
-    handleMenu(); // Close the menu
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
+const ProductStories = ({
+  handleMenu,
+  handleLogin,
+  handleSignup,
+  handleContactClick,
+}) => {
+  // const handleClick = () => {
+  //   // handleMenu(); // Close the menu
+  //   window.scrollTo(0, 0); // Scroll to the top of the page
+  // };
   return (
     <div className="MenuContiner">
+      <div className="top">
+        <div className="left">
+          <IoMdSearch className="prodIcons" />
+        </div>
+        <div className="center">Serch for products, stories, ...</div>
+        <div className="right">
+          <MdOutlineMicNone className="prodIcons" />
+        </div>
+      </div>
+
       <div className="ProductStories">
         <div className="heading">
           <h1>Products Stories Gift Guide</h1>
@@ -17,19 +33,17 @@ const ProductStories = ({handleMenu}) => {
         <div className="Stories_content">
           <ul>
             <li>
-              <Link to="/" onClick={handleClick}> Home</Link>
+              <Link to="/" onClick={handleContactClick}>
+                {" "}
+                Home
+              </Link>
             </li>
+            <li onClick={handleLogin}>Login</li>
+            <li onClick={handleSignup}>Sign Up</li>
             <li>
-              <Link to="/about" onClick={handleClick}>About us</Link>
-            </li>
-            <li>
-              <Link to="/login" onClick={handleClick}>Login</Link>
-            </li>
-            <li>
-              <Link to="/signUp" onClick={handleClick}>Sign Up</Link>
-            </li>
-            <li>
-              <Link to="contact" onClick={handleClick}>Contact</Link>
+              <Link to="contact" onClick={handleContactClick}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

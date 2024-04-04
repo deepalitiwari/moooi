@@ -2,32 +2,46 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    /* backdrop-filter: blur(5px); */
-}
-
-.ProductStories {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
-    background-color: #2f2f2f;
-    color: rgb(247, 242, 242);
-    width: 12%;
-    padding: 78px 48px;
-    border-radius: 15px;
-    position: fixed;
-    top: 50%;
+    /* backdrop-filter: blur(5px); */
+    width: min(340px, 90%);
+    /* height: 40vh; */
     left: 50%;
+    top: 44%;
+    border-radius: 15px;
+    background: Linear-gradient(270deg, #21212199 14.44%, #46454399 93.61%), #000;
+    color: rgb(247, 242, 242);
+    padding: 2.7777777778vw 1.3888888889vw;
+    position: fixed;
     transform: translate(-50%, -50%);
 }
 
-.ProductStories .heading {
-    font-size: 20px;
+.MenuContiner .top{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.prodIcons{
+    /* color: gray; */
+    font-size: 28px;
+}
+.MenuContiner .center{
+    color: gray;
+    font-size: clamp(10px, 5vw, 18px);
+}
+
+.ProductStories {
+    padding: 30px 0;
+}
+.ProductStories h1 {
+    font-size: clamp(30px, 5vw, 40px);
     margin-bottom: 30px;
+    padding: 20px;
 }
 
 .Stories_content {
-    font-size: 20px;
+    font-size: clamp(15px,5vw,20px);
     padding: 20px;
 }
 

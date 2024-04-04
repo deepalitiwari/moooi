@@ -24,7 +24,7 @@
 
 .strategy .para {
     color: white;
-    font-size: 90px;
+    font-size: clamp(30px,5vw,90px);
 }
 
 
@@ -45,9 +45,6 @@
         font-size: 1.6rem;
     }
 
-    .strategy .para {
-        font-size: 40px;
-    }
 }
 
 @media(min-width:576px) and (max-width:1200px) {
@@ -57,7 +54,4 @@
         background-position: -300px 0px;
     }
 
-    .strategy .para {
-        font-size: 45px;
-    }
 }

@@ -21,29 +21,43 @@ import Contact from "./Components/Contact/Contact";
 import { useState } from "react";
 import ViewBag from "./Components/View_Bag/ViewBag";
 import Login from "./Components/Login/Login";
+import Signup from "./Components/Signup/Signup";
 
 function App() {
-  const [show, setShow] = useState(false);
-  // const[menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [showLogin, setshowLogin] = useState(false);
-
-  const handleMenu = () => {
-    setShow(!show);
-  };
-
+  const [showSignup, setShowSignup] = useState(false);
+  console.log(menu);
+  
   function handleShow(){
-    setShow(!show);
-    setshowLogin(false)
+    setMenu(!menu);
+    setshowLogin(false);
+    setShowSignup(false)
   }
   function handleLogin(){
     setshowLogin(true);
-    setShow(false);
+    setShowSignup(false);
+    setMenu(false);
+  }
+  function handleSignup(){
+    setShowSignup(true);
+    setshowLogin(false);
+    setMenu(false);
+  }
+  
+  function handleContactClick(){
+    setMenu(false)
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
   return (
     <div className="App">
-      {show ? <ProductStories handleMenu={handleMenu} handleLogin={handleLogin}/> : null}
-      {showLogin && <Login/>}
+      {menu && <ProductStories handleLogin={handleLogin} handleSignup={handleSignup}
+       handleContactClick={handleContactClick}/>}
+
+      {showLogin && <Login handleSignup={handleSignup}/>}
+      {showSignup && <Signup handleLogin={handleLogin}/>}
       <Routes>
         <Route
           path="/products/:type/:index"
@@ -56,7 +70,7 @@ function App() {
                 moooi={"start"}
               />
               <ProductDetail />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -77,7 +91,7 @@ function App() {
                 dataHead={beddingBathHead}
                 bottom={bottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -97,7 +111,7 @@ function App() {
                 dataHead={beddingBathHead}
                 bottom={bottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -117,7 +131,7 @@ function App() {
                 dataHead={furnitureHead}
                 bottom={furniturebottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -137,7 +151,7 @@ function App() {
                 dataHead={furnitureHead}
                 bottom={furniturebottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -157,7 +171,7 @@ function App() {
                 dataHead={lightingHead}
                 bottom={lightingbottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -177,7 +191,7 @@ function App() {
                 dataHead={lightingHead}
                 bottom={lightingbottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -197,7 +211,7 @@ function App() {
                 dataHead={homeAccessoriesHead}
                 bottom={homeAccessoriesbottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -217,7 +231,7 @@ function App() {
                 dataHead={homeAccessoriesHead}
                 bottom={homeAccessoriesbottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -237,7 +251,7 @@ function App() {
                 dataHead={wallFloorHead}
                 bottom={wallFloorbottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -257,7 +271,7 @@ function App() {
                 dataHead={wallFloorHead}
                 bottom={wallFloorbottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -277,7 +291,7 @@ function App() {
                 dataHead={bodyBeautyHead}
                 bottom={bodyBeautybottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -297,7 +311,7 @@ function App() {
                 dataHead={bodyBeautyHead}
                 bottom={bodyBeautybottomArea}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -312,28 +326,14 @@ function App() {
                 leftHeader={"none"}
                 moooi={"start"}
               />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Contact />
               <Footer />
             </>
           }
-        ></Route>
-         <Route
-          path="/login"
-          element={
-            <>
-              <Header
-                textColor={"#000"}
-                backgroundColor={"#fff"}
-                leftHeader={"none"}
-                moooi={"start"}
-              />
-              <Menu handleMenu={handleMenu} />
-              <Login />
-              {/* <Footer /> */}
-            </>
-          }
-        ></Route>
+        >
+          
+        </Route>
 
         <Route
           path="/viewBag"
@@ -346,7 +346,7 @@ function App() {
                 moooi={"start"}
               />
               <ViewBag />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Footer />
             </>
           }
@@ -358,7 +358,7 @@ function App() {
             <>
               <Header textColor={"#fff"} />
               <Main />
-              <Menu handleMenu={handleMenu} />
+              <Menu handleShow={handleShow} />
               <Collection />
              <div className="repeate">
              {data.map(

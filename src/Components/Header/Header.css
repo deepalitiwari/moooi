@@ -10,23 +10,10 @@ header {
     /* position: relative; */
     cursor: pointer;
 }
-/* Header.css */
-/* .bagQuantity {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(191, 76, 76);
-    color: white;
-    font-size: 12px; 
-    padding: 4px 8px;
-    border-radius: 50%; 
-  } */
-  
-  .shopingBagdiv{
+.shopingBagdiv{
     position: relative;
-  }
-  .shopingQnty{
+}
+.shopingQnty{
     position: absolute;
     color: black;
     display: flex;
@@ -40,7 +27,7 @@ header {
     font-weight: 600;
     top:0;
     right: -2px;
-  }
+}
 .header__fix {
     position: fixed;
     top: 0px;
@@ -93,7 +80,7 @@ header .moooi h3 {
 
 .hoverOn:hover{
     background-color: rgb(162, 152, 152);
-    border-radius: 80px;
+    border-radius: 50%;
     /* padding: 5px; */
 }
 

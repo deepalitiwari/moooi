@@ -13,7 +13,7 @@
  }
 
  .viewBag .empty h1 {
-     padding: 60px 0 10px;
+     padding: 100px 0 10px;
      text-align: center;
      font-size: 55px;
      font-weight: 300;
@@ -28,7 +28,7 @@
  }
 
  .shoppingBag {
-     width: 70%;
+     width: 65%;
  }
 
  .shoppingBag h1 {
@@ -96,18 +96,17 @@
      cursor: pointer;
  }
 
- .details .delete {
-     font-size: 20px;
-     padding: 0px 6px;
+ .details .btn {
+     font-size: 17px;
+     padding: 0px 15px;
      border-radius: 23px;
      border: none;
      background: none;
      cursor: pointer;
  }
 
-
  .orderSummary {
-     width: 30%;
+     width: 35%;
  }
 
  .orderSummary .heading h1 {

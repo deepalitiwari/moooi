@@ -99,19 +99,11 @@ const ViewBag = () => {
                           </select>
                         </div>
                         <div>
-                          <button
-                            className="delete"
-                            onClick={() =>
-                              deleteHandler({
-                                src,
-                                price,
-                                available,
-                                title,
-                              })
-                            }
-                          >
+                          <button className="btn"
+                            onClick={() =>deleteHandler({src,price,available,title,})}>
                             Delete
                           </button>
+                          <button className="btn" > Save to mood boards</button>
                         </div>
                       </div>
                       <div className="ProductPrice">
