@@ -1,15 +1,70 @@
 header {
-    color: rgb(236, 233, 233);
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     padding: 25px 30px;
-    font-size: 25px;
     box-sizing: border-box;
-    /* position: relative; */
+    font-size: clamp(15px, 5vw, 25px);
     cursor: pointer;
 }
+
+.header__fix {
+    position: fixed;
+    top: 0px;
+    transition: all 0.6s ease-in-out;
+}
+
+.header__realative {
+    position: relative;
+    transition: all 0.6s ease-in-out;
+}
+
+.leftHead {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hoverOn {
+    /* Add padding to the non-hover state */
+    padding: 4px 7px;
+}
+
+.hoverOn:hover{
+    background-color: rgb(162, 152, 152);
+    border-radius: 50%;
+    /* padding: 5px; */
+}
+
+header h3 {
+    margin: 0;
+    font-size: clamp(25px , 5vw , 35px);
+    font-weight: 400px;
+    letter-spacing: 14px;
+}
+
+.moooi {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+}
+
+.moooi a {
+    color: white;
+    text-decoration: none;
+}
+
+.rightHead {
+    width: 33.33%;
+    /* height: 3rem; */
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(2px, 5vw, 30px);
+    line-height: 2rem;
+    align-items: center;
+}
+
 .shopingBagdiv{
     position: relative;
 }
@@ -28,73 +83,17 @@ header {
     top:0;
     right: -2px;
 }
-.header__fix {
-    position: fixed;
-    top: 0px;
-    transition: all 0.6s ease-in-out;
-}
-
-.header__realative {
-    position: relative;
-    transition: all 0.6s ease-in-out;
-
-}
-
-header .moooi h3 {
-    margin: 0;
-    font-size: 35px;
-    font-weight: 400px;
-    letter-spacing: 14px;
-}
-
-.leftHead {
-    width: 33.33%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.moooi {
-    width: 33.33%;
-    display: flex;
-    justify-content: center;
-}
-
-.moooi a {
-    /* color: white; */
-    text-decoration: none;
-}
-
-.rightHead {
-    width: 33.33%;
-    height: 3rem;
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-    line-height: 2rem;
-    align-items: center;
-}
-.hoverOn {
-    /* Add padding to the non-hover state */
-    padding: 4px 7px;
-}
-
-.hoverOn:hover{
-    background-color: rgb(162, 152, 152);
-    border-radius: 50%;
-    /* padding: 5px; */
-}
 
 @media (max-width:576px) {
     header {
-        font-size: 20px;
         padding: 30px 25px;
     }
 
     .rightHead {
-        gap: 10px;
+        gap: 2px;
     }
 
-    header h3 {
-        font-size: 30px;
+    header h3{
+        letter-spacing: 2px;
     }
 }

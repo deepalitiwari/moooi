@@ -56,6 +56,10 @@
 .repeate>.DesignDream:nth-child(2) button{
     cursor: pointer;
 }
+/* in mobile view */
+.repeate>.DesignDream:nth-child(2)>a{
+    color: white;
+}
 .repeate>.DesignDream:nth-child(3) button{
     border: none;
     background: transparent;
@@ -87,5 +91,8 @@
     }
     .DesignDream button{
         padding: 6px 9px;
+    }
+    .DesignDream h3{
+        padding: 10px;
     }
 }

@@ -13,10 +13,8 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi}) => {
   const [preScrollPosition,setProvScrollPos]=useState(window.scrollY);
   const [headerPosition,setHeaderPostion]=useState(null);
   
-
   const cartItem = useSelector((state) => state.cart.items);
 
-// console.log(quantity);
   useEffect(()=>{
     function scollHandler(){
       const scroll=window.scrollY;
@@ -40,7 +38,7 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi}) => {
       >
         <div className="leftHead"  style={{ display: leftHeader }}>
           <div className="hoverOn">
-          <FiMic />
+            <FiMic />
           </div>
         </div>
         <div className="moooi" style={{ justifyContent: moooi }}>

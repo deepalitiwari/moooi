@@ -65,7 +65,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -82,7 +82,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -102,7 +102,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -122,7 +122,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -142,7 +142,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -162,7 +162,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -182,7 +182,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -202,7 +202,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -222,7 +222,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -242,7 +242,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -262,7 +262,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -282,7 +282,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
@@ -302,7 +302,7 @@ function App() {
             <>
               <Header
                 textColor={"#000"}
-                backgroundColor={"#fff"}
+                // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
               />
