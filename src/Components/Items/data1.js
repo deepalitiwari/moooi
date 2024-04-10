@@ -22,13 +22,13 @@ export const beddingBath = [
     available: "In stock",
     type: "beddingBath",
   },
-  {
-    src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FXL%20Pillows%2Fimage-thumb__53628__header_fullscreen_2x_jpg%2FMenagerie-Cushion-XL_Raven-10_Topshot.webp&w=3840&q=80",
-    title: "Menagerie of Extinct Animals XL Pillow",
-    price: "$250",
-    available: "In stock",
-    type: "beddingBath",
-  },
+  // {
+  //   src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FXL%20Pillows%2Fimage-thumb__53628__header_fullscreen_2x_jpg%2FMenagerie-Cushion-XL_Raven-10_Topshot.webp&w=3840&q=80",
+  //   title: "Menagerie of Extinct Animals XL Pillow",
+  //   price: "$250",
+  //   available: "In stock",
+  //   type: "beddingBath",
+  // },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FDuvets%2FDuvets-colored-sheets%2Fimage-thumb__56613__header_fullscreen_2x_jpg%2FUmbrella-Squid_Silver_2P-10_Topshot-NEW_1.webp&w=2048&q=80",
     title: "Umbrella Squid Duvet Cover Set",

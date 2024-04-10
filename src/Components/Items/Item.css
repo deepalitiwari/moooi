@@ -88,7 +88,7 @@
 }
 
 .cart {
-    width: 560px;
+    width: 360px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -136,6 +136,15 @@
     padding: 5px 18px;
     font-size: 17px;
     color: rgb(62, 61, 61);
+}
+@media(min-width : 375px) and (max-width: 566px){
+    .item-btn {
+        flex-direction: column;
+    }
+    
+    .item-bottom .btn{
+        flex-direction: column;
+    }
 }
 
 @media(max-width:567px) {

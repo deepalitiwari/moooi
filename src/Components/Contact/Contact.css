@@ -116,6 +116,8 @@
 .bottom .infoCart {
     padding-bottom: 50px;
 }
+
+
 @media(max-width:520px) {
     .Contact .top h1 {
         font-size: 50px;
@@ -123,7 +125,7 @@
 
     .Contact .top .para {
         font-size: 20px;
-        padding: 0px;
+        padding: 10px;
     }
 
     .stores h1 {

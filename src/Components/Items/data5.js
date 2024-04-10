@@ -1,12 +1,12 @@
 export const wallFloor = [
-  {
-    src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FWallcovering%2Fumbrella%20squid%2FQueen%20Cobra%2Fimage-thumb__46568__header_fullscreen_2x_jpg%2FMoooiWallcoveringMementoMoooi_QueenCobra_MO4012_Mood_Web_HR.webp&w=3840&q=80",
-    alt: "Queen Cobra Wallcovering",
-    title: "Queen Cobra Wallcovering",
-    price: "$249",
-    available: "In stock",
-    type: "wallFloor",
-  },
+  // {
+  //   src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FWallcovering%2Fumbrella%20squid%2FQueen%20Cobra%2Fimage-thumb__46568__header_fullscreen_2x_jpg%2FMoooiWallcoveringMementoMoooi_QueenCobra_MO4012_Mood_Web_HR.webp&w=3840&q=80",
+  //   alt: "Queen Cobra Wallcovering",
+  //   title: "Queen Cobra Wallcovering",
+  //   price: "$249",
+  //   available: "In stock",
+  //   type: "wallFloor",
+  // },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FCarpets%2FLinesLinesLines%2FProduct%20Shots%2F81972%2Fimage-thumb__81972__header_fullscreen_2x_jpg%2FMoooi-Carpets-LinesLinesLines-By-Alf-Product_1.webp&w=1080&q=80",
     title: "LinesLinesLines Carpet",
