@@ -8,35 +8,35 @@ import Bag from "../Bag/Bag";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Header = ({ textColor, backgroundColor, leftHeader, moooi}) => {
+const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
   const [isBagOpen, setIsBagOpen] = useState(false);
-  const [preScrollPosition,setProvScrollPos]=useState(window.scrollY);
-  const [headerPosition,setHeaderPostion]=useState(null);
-  
+  const [preScrollPosition, setProvScrollPos] = useState(window.scrollY);
+  const [headerPosition, setHeaderPostion] = useState(null);
+
   const cartItem = useSelector((state) => state.cart.items);
 
-  useEffect(()=>{
-    function scollHandler(){
-      const scroll=window.scrollY;
-      setHeaderPostion(preScrollPosition>scroll)
-      setProvScrollPos(scroll)
+  useEffect(() => {
+    function scollHandler() {
+      const scroll = window.scrollY;
+      setHeaderPostion(preScrollPosition > scroll);
+      setProvScrollPos(scroll);
     }
-    window.addEventListener("scroll",scollHandler);
-    return ()=>window.removeEventListener("scroll",scollHandler);
-  },[preScrollPosition])
+    window.addEventListener("scroll", scollHandler);
+    return () => window.removeEventListener("scroll", scollHandler);
+  }, [preScrollPosition]);
 
   function toogleBag() {
     setIsBagOpen(!isBagOpen);
     console.log(isBagOpen);
   }
-  
+
   return (
     <div>
       <header
         style={{ color: textColor, backgroundColor: backgroundColor }}
         className={`${headerPosition ? "header__fix" : "header__realative"}`}
       >
-        <div className="leftHead"  style={{ display: leftHeader }}>
+        <div className="leftHead" style={{ display: leftHeader }}>
           <div className="hoverOn">
             <FiMic />
           </div>
@@ -50,10 +50,10 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi}) => {
           <div className="hoverOn">
             <IoMdSearch />
           </div>
-          <div className="hoverOn">    
+          <div className="hoverOn">
             <HiOutlineViewBoards />
           </div>
-          <div className="hoverOn shopingBagdiv">    
+          <div className="hoverOn shopingBagdiv">
             <MdOutlineShoppingBag onClick={toogleBag} />
             {/* {quantity > 0 && <span className="bagQuantity">{quantity}</span>} */}
             <span className="shopingQnty">{cartItem.length}</span>

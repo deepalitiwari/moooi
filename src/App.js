@@ -9,12 +9,36 @@ import Menu from "./Components/Menu/Menu";
 import Strategy from "./Components/Strategy/Strategy";
 import { data } from "./data";
 import { Routes, Route } from "react-router-dom";
-import {beddingBath, beddingBathHead, bottomArea} from "./Components/Items/data1";
-import {furniture, furnitureHead, furniturebottomArea} from "./Components/Items/data2";
-import {lighting, lightingHead, lightingbottomArea} from "./Components/Items/data3";
-import {homeAccessories,homeAccessoriesHead,homeAccessoriesbottomArea} from "./Components/Items/data4";
-import {wallFloor, wallFloorHead, wallFloorbottomArea} from "./Components/Items/data5";
-import {bodyBeauty, bodyBeautyHead, bodyBeautybottomArea} from "./Components/Items/data6";
+import {
+  beddingBath,
+  beddingBathHead,
+  bottomArea,
+} from "./Components/Items/data1";
+import {
+  furniture,
+  furnitureHead,
+  furniturebottomArea,
+} from "./Components/Items/data2";
+import {
+  lighting,
+  lightingHead,
+  lightingbottomArea,
+} from "./Components/Items/data3";
+import {
+  homeAccessories,
+  homeAccessoriesHead,
+  homeAccessoriesbottomArea,
+} from "./Components/Items/data4";
+import {
+  wallFloor,
+  wallFloorHead,
+  wallFloorbottomArea,
+} from "./Components/Items/data5";
+import {
+  bodyBeauty,
+  bodyBeautyHead,
+  bodyBeautybottomArea,
+} from "./Components/Items/data6";
 import ProductDetail from "./Components/Product_Details/ProductDetail";
 import ProductStories from "./Components/Product_Stories/ProductStories";
 import Contact from "./Components/Contact/Contact";
@@ -28,36 +52,61 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [showLogin, setshowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
-  console.log(menu);
-  
-  function handleShow(){
+
+  const [open, setOpen] = useState(false);
+  const [SuccessMsg, setSuccessMsg] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const handleOpen = (msg) => {
+    setOpen(true);
+    setSuccessMsg(msg);
+  };
+
+  const handleClose = (msg) => {
+    setOpen(false);
+    setSuccessMsg(msg);
+  };
+
+  function handleShow() {
     setMenu(!menu);
     setshowLogin(false);
-    setShowSignup(false)
+    setShowSignup(false);
   }
-  function handleLogin(){
+  function handleLogin() {
     setshowLogin(true);
     setShowSignup(false);
     setMenu(false);
   }
-  function handleSignup(){
+  function handleSignup() {
     setShowSignup(true);
     setshowLogin(false);
     setMenu(false);
   }
-  
-  function handleContactClick(){
-    setMenu(false)
+
+  function handleContactClick() {
+    setMenu(false);
     window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
   return (
     <div className="App">
-      {menu && <ProductStories handleLogin={handleLogin} handleSignup={handleSignup}
-       handleContactClick={handleContactClick}/>}
+      {menu && (
+        <ProductStories
+          handleLogin={handleLogin}
+          handleSignup={handleSignup}
+          handleContactClick={handleContactClick}
+        />
+      )}
 
-      {showLogin && <Login handleSignup={handleSignup}/>}
-      {showSignup && <Signup handleLogin={handleLogin}/>}
+      {showLogin && (
+        <Login
+          handleSignup={handleSignup}
+          handleOpen={handleOpen}
+          open={open}
+          handleClose={handleClose}
+        />
+      )}
+      {showSignup && <Signup handleLogin={handleLogin} />}
       <Routes>
         <Route
           path="/products/:type/:index"
@@ -331,9 +380,7 @@ function App() {
               <Footer />
             </>
           }
-        >
-          
-        </Route>
+        ></Route>
 
         <Route
           path="/viewBag"
@@ -360,16 +407,39 @@ function App() {
               <Main />
               <Menu handleShow={handleShow} />
               <Collection />
-             <div className="repeate">
-             {data.map(
-                (
-                  {h3,src,children,direction,style,textColor, navigation,btn,link},index) => {
-                  return (
-                    <DesignDream h3={h3} src={src} style={style} children={children} direction={direction} textColor={textColor} navigation={navigation} btn={btn} link={link} key={index} />
-                  );
-                }
-              )}
-             </div>
+              <div className="repeate">
+                {data.map(
+                  (
+                    {
+                      h3,
+                      src,
+                      children,
+                      direction,
+                      style,
+                      textColor,
+                      navigation,
+                      btn,
+                      link,
+                    },
+                    index
+                  ) => {
+                    return (
+                      <DesignDream
+                        h3={h3}
+                        src={src}
+                        style={style}
+                        children={children}
+                        direction={direction}
+                        textColor={textColor}
+                        navigation={navigation}
+                        btn={btn}
+                        link={link}
+                        key={index}
+                      />
+                    );
+                  }
+                )}
+              </div>
               <Strategy />
               <DesignDream
                 h3="Design Dream"
