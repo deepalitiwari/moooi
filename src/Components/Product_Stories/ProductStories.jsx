@@ -14,13 +14,25 @@ const ProductStories = ({
   //   // handleMenu(); // Close the menu
   //   window.scrollTo(0, 0); // Scroll to the top of the page
   // };
+
+  const [text, setText] = useState("");
+  const handleText = (e) => {
+    setText(e.target.value);
+    console.log(text);
+  };
   return (
     <div className="MenuContiner">
       <div className="top">
         <div className="left">
           <IoMdSearch className="prodIcons" />
         </div>
-        <div className="center">Serch for products, stories, ...</div>
+        <div className="center">
+          <input
+            type="text"
+            onChange={handleText}
+            placeholder="Serch for products, stories, ..."
+          />
+        </div>
         <div className="right">
           <MdOutlineMicNone className="prodIcons" />
         </div>

@@ -3,7 +3,6 @@
     color: white;
 }
 
-/* Footer Bottom css*/
 .btn-Icon {
     display: flex;
     width: min(20px, 100);
@@ -26,7 +25,7 @@
 .europe-btn select {
     background-color: transparent;
     color: white;
-    /* width: 60%; */
+    width: 60%;
     font-size: 20px;
     border: none;
     outline: none;
@@ -168,6 +167,5 @@
 
     .bootom-icons ul li {
         margin: 30px 0px;
-
     }
 }

@@ -1,5 +1,5 @@
 .collection {
-    margin: 200px 0;
+    margin: 70px 0;
 }
 
 .collection .heading {
@@ -44,25 +44,27 @@
     height: 270px;
 }
 
-.collectioncart:hover{
+.collectioncart:hover {
     background-color: rgb(241, 241, 238);
     border-radius: 15px;
 }
 
 .collectionTitle {
     text-decoration: none;
-    text-decoration: none;
 }
-@media(max-width:1024px){
 
-    .collectioncart img  {
+@media(max-width:1024px) {
+
+    .collectioncart img {
         background-color: rgb(241, 241, 238);
         width: 250px;
     }
-    .collectionTitle{
+
+    .collectionTitle {
         padding: 12px;
     }
-    .collectioncart:hover{
+
+    .collectioncart:hover {
         background-color: transparent;
     }
 }

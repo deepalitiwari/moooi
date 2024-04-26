@@ -65,23 +65,27 @@ const Contact = () => {
   ];
   return (
     <div className="Contact">
-       <div className="contactTop">
+      <div className="contactTop">
         <div>
           <Link to="/">
             <li>Home</li>
           </Link>
         </div>
         <div>
-          <li> <IoMdArrowDropright /> </li>
+          <li>
+            {" "}
+            <IoMdArrowDropright />{" "}
+          </li>
         </div>
         <div>
-          <li>Shopping Bag</li>
+          <li>Contact</li>
         </div>
       </div>
       <div className="top">
         <h1>Contact</h1>
         <p className="para">
-          Do you want to know more regarding Moooi or our products? We’d be happy to hear from you!
+          Do you want to know more regarding Moooi or our products? We’d be
+          happy to hear from you!
         </p>
         <div className="contactButton">
           <button>
@@ -116,9 +120,18 @@ const Contact = () => {
               <div className="infoCart" key={index}>
                 <div className="details">
                   <h3>{item.heading}</h3>
-                  <p> <IoLocationSharp /> {item.address} </p>
-                  <p> <IoCall /> {item.mobile} </p>
-                  <p> <MdOutlineEmail /> {item.mail} </p>
+                  <p>
+                    {" "}
+                    <IoLocationSharp /> {item.address}{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    <IoCall /> {item.mobile}{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    <MdOutlineEmail /> {item.mail}{" "}
+                  </p>
                 </div>
               </div>
             ))}

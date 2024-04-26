@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./ProductDetail.css";
-import {MdOutlineFileDownload, MdOutlineShare, MdOutlineDashboard, MdOutlineLocalShipping,} from "react-icons/md";
+import {
+  MdOutlineFileDownload,
+  MdOutlineShare,
+  MdOutlineDashboard,
+  MdOutlineLocalShipping,
+} from "react-icons/md";
 import { TbTruckReturn } from "react-icons/tb";
 import { GiCircleCage } from "react-icons/gi";
 import { useParams } from "react-router-dom";
@@ -15,7 +20,14 @@ const ProductDetail = () => {
   const { type, index } = useParams();
   const [prodData, setData] = useState({});
 
-  let myData = [beddingBath, furniture, lighting, homeAccessories, wallFloor, bodyBeauty];
+  let myData = [
+    beddingBath,
+    furniture,
+    lighting,
+    homeAccessories,
+    wallFloor,
+    bodyBeauty,
+  ];
 
   useEffect(() => {
     console.log(prodData);
@@ -38,7 +50,7 @@ const ProductDetail = () => {
   return (
     <div className="productDetails">
       <div className="productImg">
-        <img src={prodData.src} alt="Product Image"/>
+        <img src={prodData.src} alt="Product Image" />
       </div>
       <div className="productData">
         <BuyItem
@@ -47,29 +59,19 @@ const ProductDetail = () => {
           price={prodData.price}
           available={prodData.available}
         />
-        <h1>{prodData.title}</h1>
+        <h1 className="head">{prodData.title}</h1>
         <h3>Moooi,2022</h3>
         <div className="ProdContent">
           <div className="leftContent">
             <div className="para">
               <p>
-                Elevate your space with our exquisite product, {prodData.title},crafted to perfection. Whether it's for {prodData.type}, our product promises to captivate your senses and redefine your ambiance.
+                Elevate your space with our exquisite product, {prodData.title}
+                ,crafted to perfection. Whether it's for {prodData.type}, our
+                product promises to captivate your senses and redefine your
+                ambiance.
               </p>
               <a>Read more</a>
             </div>
-            {/* <div className="buttons">
-              <button>Dimensions</button>
-              <button>Specs</button>
-              <button>
-                <MdOutlineFileDownload />
-              </button>
-              <button>
-                <MdOutlineShare />
-              </button>
-              <button>
-                <MdOutlineDashboard />
-              </button>
-            </div> */}
           </div>
           <div className="rightContent">
             <ul>
@@ -92,7 +94,9 @@ const ProductDetail = () => {
       <div className="suggestion">
         <h1 className="heading">our suggestions</h1>
         <p className="para">
-          At Moooi, we prioritize your satisfaction and convenience. Explore our extensive range of customer-centric policies crafted to elevate your shopping experience:
+          At Moooi, we prioritize your satisfaction and convenience. Explore our
+          extensive range of customer-centric policies crafted to elevate your
+          shopping experience:
         </p>
       </div>
       <div className="policies">
@@ -108,7 +112,8 @@ const ProductDetail = () => {
           <div className="innerPolicy">
             <h1>Easy Return Within 100 Days</h1>
             <p>
-              If you're not in love with our product you may return within 100 days of receipt without given reasons.
+              If you're not in love with our product you may return within 100
+              days of receipt without given reasons.
             </p>
             <a>Return Policy</a>
           </div>
@@ -117,7 +122,9 @@ const ProductDetail = () => {
           <GiCircleCage className="productIcons" />
           <h1>5 Years Warranty after Registraion</h1>
           <p>
-            All our lighting and furniture products come with The Button. Tap it to check authenticity and register your product to get extended warranty.
+            All our lighting and furniture products come with The Button. Tap it
+            to check authenticity and register your product to get extended
+            warranty.
           </p>
           <a>The Button</a>
         </div>

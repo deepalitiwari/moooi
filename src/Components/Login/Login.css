@@ -1,4 +1,4 @@
-.loginContainer{
+.loginContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -14,19 +14,23 @@
     position: fixed;
     transform: translate(-50%, -50%);
 }
+
 .loginHead h3 {
-    font-size: clamp(30px,5vw,40px) ;
+    font-size: clamp(30px, 5vw, 40px);
     font-weight: 400;
     color: white;
     margin: 0;
 }
+
 .loginContainer p {
     color: #9c9c9c;
     padding: 10px 27px 0;
 }
+
 .loginContainer form {
     width: 100%;
 }
+
 .loginfields {
     background: #ffffff0d;
     border: 1px solid #0000;
@@ -34,21 +38,25 @@
     padding: .8em 1.125rem .775em;
     text-align: left;
 }
+
 .loginfields input {
     background-color: initial;
     border: none;
     color: #fff;
     width: 100%;
 }
+
 .loginfields label {
     color: #b9b9b9;
     display: block;
     font-size: 14px;
 }
+
 .loginfields input:focus {
     font-size: medium;
     outline: none;
 }
+
 .loginContainer button {
     background: #0000;
     border: none;
@@ -56,6 +64,7 @@
     color: #fff;
     font-size: 18px;
 }
+
 .loginBottom {
     display: flex;
     flex-direction: column;
@@ -63,10 +72,16 @@
     font-size: 16px;
     padding-top: 25px;
 }
-.loginBottom button{
+
+.loginBottom button {
     border: none;
     color: #4da22e;
     font-size: 16px;
     font-weight: 500;
     text-decoration: underline;
+}
+
+.success {
+    color: green;
+    font-size: 22px;
 }

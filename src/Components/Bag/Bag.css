@@ -1,12 +1,14 @@
 .bag {
     background-color: rgb(252, 249, 249);
     position: fixed;
-    width: 30%;
+    width: 25%;
     min-height: 40vh;
     right: 10px;
     top: 10px;
     box-sizing: border-box;
     border-radius: 12px;
+    box-shadow: 10px 15px 45px #000,
+        inset 5px 5px 10px #ccc;
 }
 
 .bagProducts {
@@ -23,17 +25,19 @@
 }
 
 .emptyCart h1 {
-    font-size: 34px;
+    font-size: clamp(20px, 5vw, 34px);
     font-weight: 600;
 }
 
 .emptyCart p {
     font-weight: 300;
-    font-size: 22px;
+    font-size: clamp(12px, 5vw, 22px);
 }
-.close{
+
+.close {
     cursor: pointer;
 }
+
 .closeBag {
     display: none;
 }
@@ -48,11 +52,10 @@
 }
 
 .bagContent {
-    /* font-size: 40px; */
     padding: 20px;
 }
 
-.head {
+.bagContent .head {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -99,11 +102,11 @@
     text-align: center;
     border-top: 1px solid gray;
     padding: 20px 0;
+    font-size: clamp(12px, 5vw, 20px);
 }
 
 .total {
     color: gray;
-    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -116,7 +119,7 @@
 .bottom .buttons button {
     border: none;
     border-radius: 30px;
-    font-size: 1.3rem;
+    font-size: clamp(12px, 5vw, 20px);
     margin-top: 30px;
     padding: 10px 40px;
     cursor: pointer;
@@ -135,7 +138,6 @@
 @media(min-width:780px) and (max-width:1250px) {
     .bag {
         width: 50%;
-        /* min-height: 40vh; */
         right: 10px;
         top: 70px;
     }
@@ -146,10 +148,6 @@
         width: 70%;
         right: 10px;
     }
-
-    .bottom .buttons button {
-        font-size: 1rem;
-    }
 }
 
 @media(min-width:300px) and (max-width:610px) {
@@ -157,7 +155,14 @@
         width: 96%;
     }
 
-    .bottom .buttons button {
-        font-size: 1rem;
+    .emptyCart {
+        padding: 20px 0px;
+        text-align: center;
+        line-height: 4rem;
     }
+
+    .bottom .buttons button {
+        padding: 10px;
+    }
+
 }

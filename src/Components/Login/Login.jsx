@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import Success from "../Success/Success";
 
-const Login = ({ handleSignup, open, handleOpen, handleClose }) => {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState(null);
-  // // console.log(handleSignup);
+const Login = ({
+  handleSignup,
+  open,
+  handleOpen,
+  handleClose,
+  handleSuccess,
+}) => {
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -17,45 +21,44 @@ const Login = ({ handleSignup, open, handleOpen, handleClose }) => {
   });
   const [finalErr, setFinalErr] = useState("");
 
-  useEffect(() => {}, [data]);
   const handleLoginInputs = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
-    // console.log(data.email);
-    console.log(data);
   };
-  const handleSignIn = (e) => {
+
+  const handleSignIn = async (e) => {
     e.preventDefault();
     const newErrors = {};
-    if (!data.email || data.email.length < 4) {
+    if (!data.email || data.email.length < 10) {
       newErrors.email = "Please enter a valid email address";
     }
-    if (!data.password || data.password.length < 6) {
-      newErrors.password = "Password must be atleast 6 characters";
+    if (!data.password || data.password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters";
     }
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      handleSignInWithFirebase(data.email, data.password);
-    }
-  };
-  const handleSignInWithFirebase = async (email, password) => {
-    try {
-      const res = await signInWithEmailAndPassword(auth, email, password);
-      handleOpen("Login Successfully!");
-      setData({ email: "", password: "" });
-    } catch (error) {
-      console.log(error.code);
-      if (error.code === "auth/invalid-credential") {
-        setFinalErr("Inavlid email id or password");
-        console.log("Invalid email Id or password..");
-      } else {
-        setFinalErr("please register yourself before login");
-        console.log("please register yourself before login");
+      try {
+        await handleSignInWithFirebase(data.email, data.password);
+        handleOpen("Login Successfully!");
+        setData({ email: "", password: "" });
+        handleSuccess(); // Set login success
+      } catch (error) {
+        console.log(error.code);
+        if (error.code === "auth/invalid-credential") {
+          setFinalErr("Invalid email or password");
+        } else {
+          setFinalErr("Please register before login");
+        }
+        setErrors(error.message);
       }
-      setErrors(error.message);
     }
   };
+
+  const handleSignInWithFirebase = async (email, password) => {
+    await signInWithEmailAndPassword(auth, email, password);
+  };
+
   return (
     <section id="login">
       <div className="loginContainer">
@@ -72,6 +75,7 @@ const Login = ({ handleSignup, open, handleOpen, handleClose }) => {
               value={data.email}
               onChange={handleLoginInputs}
             />
+            {error.email && <span className="error">{error.email}</span>}
           </div>
           <div className="loginfields">
             <label>Password</label>
@@ -81,15 +85,19 @@ const Login = ({ handleSignup, open, handleOpen, handleClose }) => {
               value={data.password}
               onChange={handleLoginInputs}
             />
+            {error.password && <span className="error">{error.password}</span>}
           </div>
           {finalErr && <span className="error">{finalErr}</span>}
+          {/* {loginSuccess && <Success />} */}
           <div className="btn">
-            <button type="submit">Login</button>
-          </div>{" "}
+            <button type="submit" onClick={handleSuccess}>
+              Login
+            </button>
+          </div>
         </form>
         <div className="loginBottom">
           <span>Don't have an account?</span>
-          <button onClick={handleSignup}>sign up</button>
+          <button onClick={handleSignup}>Sign up</button>
         </div>
       </div>
     </section>

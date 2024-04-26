@@ -36,19 +36,19 @@ const Signup = ({ handleLogin, handleOpen, handleClose, open }) => {
     e.preventDefault();
     const newErrors = {};
 
-    if (!user.email || user.email.length < 5) {
+    if (!user.email || user.email.length < 10) {
       newErrors.email = "Please enter a valid email address";
     }
     if (
       !user.firstName ||
-      user.firstName.length < 3 ||
+      user.firstName.length < 4 ||
       !user.lastName ||
-      user.lastName.length < 3
+      user.lastName.length < 4
     ) {
       newErrors.firstName = "first name must have atleast 3 characters";
       newErrors.lastName = "last name must have atleast 3 characters";
     }
-    if (user.password < 3) {
+    if (user.password < 8) {
       newErrors.password = "Please enter strong password";
     }
     if (user.password !== user.confirmPassword) {

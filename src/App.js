@@ -46,6 +46,7 @@ import { useState } from "react";
 import ViewBag from "./Components/View_Bag/ViewBag";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
+import Success from "./Components/Success/Success";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -57,6 +58,7 @@ function App() {
   const [SuccessMsg, setSuccessMsg] = useState(null);
   const [isExpanded, setIsExpanded] = useState(true);
 
+  const [loginSuccess, setLoginSuccess] = useState(false);
   const handleOpen = (msg) => {
     setOpen(true);
     setSuccessMsg(msg);
@@ -72,6 +74,11 @@ function App() {
     setshowLogin(false);
     setShowSignup(false);
   }
+
+  const handleSuccess = () => {
+    setLoginSuccess(true);
+    setshowLogin(false);
+  };
   function handleLogin() {
     setshowLogin(true);
     setShowSignup(false);
@@ -97,6 +104,7 @@ function App() {
           handleContactClick={handleContactClick}
         />
       )}
+      {loginSuccess && <Success handleSuccess={() => setLoginSuccess(false)} />}
 
       {showLogin && (
         <Login
@@ -104,6 +112,7 @@ function App() {
           handleOpen={handleOpen}
           open={open}
           handleClose={handleClose}
+          handleSuccess={handleSuccess}
         />
       )}
       {showSignup && <Signup handleLogin={handleLogin} />}

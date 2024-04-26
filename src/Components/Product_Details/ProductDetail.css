@@ -16,12 +16,12 @@
 }
 
 .productData h3 {
-    font-size: 18px;
+    font-size: clamp(12px, 5vw, 18px);
     padding: 20px 0;
 }
 
-.productData h1 {
-    font-size: 72px;
+.productData .head {
+    font-size: clamp(27px, 5vw, 72px);
     font-weight: 200;
     width: 60%;
 }
@@ -39,7 +39,7 @@
 
 .ProdContent .leftContent p {
     width: 90%;
-    font-size: 42px;
+    font-size: clamp(16px, 5vw, 35px);
     color: rgb(99, 98, 98);
     font-weight: 200;
     padding: 25px 0;
@@ -49,26 +49,9 @@
 .para a {
     text-decoration: underline;
     margin: 8px 0 0;
-    font-size: 20px;
+    font-size: clamp(10px, 5vw, 18px);
     color: rgb(99, 98, 98);
 }
-
-/* .leftContent .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 30px 10px 18px;
-}
-
-.leftContent .buttons button {
-    background-color: transparent;
-    border-radius: 40px;
-    font-size: 20px;
-    padding: 5px 10px;
-    border: 1px solid gray;
-    cursor: pointer;
-} */
 
 .ProdContent .rightContent {
     width: 30%;
@@ -81,9 +64,7 @@
     flex-direction: column;
     list-style-type: none;
     color: rgb(99, 98, 98);
-    font-size: 20px;
-    /* padding: 20px 0; */
-    /* margin: 10px 0; */
+    font-size: clamp(10px, 5vw, 20px);
 }
 
 .rightContent li {
@@ -94,26 +75,23 @@
     margin: 20px;
 }
 
+.suggestion {
+    margin: 100px;
+}
+
 .suggestion .heading {
     text-align: center;
-    font-size: 16px;
+    font-size: clamp(14px, 5vw, 26px);
     text-transform: uppercase;
     color: rgb(59, 56, 56);
 }
 
-.suggestion {
-    /* padding: 100px; */
-    margin: 100px;
-}
-
 .suggestion .para {
-    font-size: 48px;
+    font-size: clamp(28px, 5vw, 35px);
     text-align: center;
-    /* padding: 0 400px; */
-
     color: rgb(99, 98, 98);
     font-weight: 200;
-    margin: 40px 90px 10px;
+    margin: 40px 110px 10px;
 }
 
 .policies {
@@ -126,15 +104,15 @@
 .policy {
     width: 33%;
     color: rgb(99, 98, 98);
-    padding: 60px;
+    padding: 60px 10px;
 }
 
 .policy .productIcons {
-    font-size: 40px;
+    font-size: clamp(25px, 5vw, 40px);
 }
 
 .policy h1 {
-    font-size: 25px;
+    font-size: clamp(20px, 5vw, 25px);
     font-weight: 600;
     padding: 0 0 10px;
 }
@@ -148,13 +126,7 @@
 }
 
 @media(max-width:567px) {
-    .productImg {
-        width: 400px;
-        height: 400px;
-    }
-
     .productImg img {
-
         width: 325px;
         height: 400px;
     }
@@ -163,13 +135,7 @@
         margin: 0 30px;
     }
 
-    .productData h1 {
-        font-size: 32px;
-        font-weight: 300;
-    }
-
     .productData h3 {
-        font-size: 14px;
         padding: 20px 0;
         width: 30%;
     }
@@ -182,10 +148,6 @@
         width: 100%;
     }
 
-    .ProdContent .leftContent p {
-        font-size: 26px;
-    }
-
     .ProdContent .rightContent {
         width: 100%;
     }
@@ -195,11 +157,7 @@
     }
 
     .suggestion {
-        margin: 100px 10px;
-    }
-
-    .suggestion .para {
-        font-size: 28px;
+        margin: 30px 10px;
     }
 
     .policies {
@@ -228,35 +186,11 @@
         height: 400px;
     }
 
-    .productData h1 {
-        font-size: 52px;
-    }
-
-    .ProdContent .leftContent p {
-        font-size: 28px;
-    }
-
-    .para a {
-        font-size: 16px;
-    }
-
-    .rightContent ul {
-        font-size: 16px;
+    .suggestion {
+        margin: 0;
     }
 
     .rightContent span {
         margin: 10px;
-    }
-
-    .suggestion .para {
-        font-size: 30px;
-    }
-
-    .policy .productIcons {
-        font-size: 35px;
-    }
-
-    .policy h1 {
-        font-size: 20px;
     }
 }
