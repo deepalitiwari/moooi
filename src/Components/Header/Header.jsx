@@ -12,6 +12,7 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
   const [isBagOpen, setIsBagOpen] = useState(false);
   const [preScrollPosition, setProvScrollPos] = useState(window.scrollY);
   const [headerPosition, setHeaderPostion] = useState(null);
+  // const [isBackdropVisible, setIsBackdropVisible] = useState(false);
 
   const cartItem = useSelector((state) => state.cart.items);
 
@@ -28,6 +29,7 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
   function toogleBag() {
     setIsBagOpen(!isBagOpen);
     console.log(isBagOpen);
+    // setIsBackdropVisible(!isBackdropVisible);
   }
 
   return (

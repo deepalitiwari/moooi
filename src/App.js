@@ -413,6 +413,8 @@ function App() {
           element={
             <>
               <Header textColor={"#fff"} />
+              {/* <Header textColor={backgroundColor === '#fff' ? '#000' : '#fff'} backgroundColor={backgroundColor} /> */}
+
               <Main />
               <Menu handleShow={handleShow} />
               <Collection />
