@@ -5,7 +5,8 @@ header {
     width: 100%;
     padding: 25px 30px;
     box-sizing: border-box;
-    font-size: clamp(15px, 5vw, 25px);
+    font-family: Rubik, sans-serif;
+    font-size: clamp(15px, 5vw, 30px);
     cursor: pointer;
 }
 
@@ -38,10 +39,10 @@ header {
 }
 
 header h3 {
+    font-size: clamp(23px, 5vw, 42px);
+    font-weight: 650;
+    letter-spacing: clamp(1vw, 4vw, 10px);
     margin: 0;
-    font-size: clamp(25px, 5vw, 35px);
-    font-weight: 400px;
-    letter-spacing: 14px;
 }
 
 .moooi {
@@ -61,7 +62,7 @@ header h3 {
     display: flex;
     justify-content: flex-end;
     gap: clamp(2px, 5vw, 30px);
-    line-height: 2rem;
+    line-height: 3rem;
     align-items: center;
 }
 
