@@ -6,7 +6,7 @@ header {
     padding: 25px 30px;
     box-sizing: border-box;
     font-family: Rubik, sans-serif;
-    font-size: clamp(15px, 5vw, 30px);
+    font-size: clamp(15px, 5vw, 25px);
     cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ header {
 }
 
 header h3 {
-    font-size: clamp(23px, 5vw, 42px);
+    font-size: clamp(23px, 5vw, 40px);
     font-weight: 650;
     letter-spacing: clamp(1vw, 4vw, 10px);
     margin: 0;
@@ -62,7 +62,7 @@ header h3 {
     display: flex;
     justify-content: flex-end;
     gap: clamp(2px, 5vw, 30px);
-    line-height: 3rem;
+    line-height: 2.5rem;
     align-items: center;
 }
 

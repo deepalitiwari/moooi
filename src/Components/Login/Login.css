@@ -1,3 +1,14 @@
+/* #login {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: brightness(80%);
+    backdrop-filter: blur(0px);
+    z-index: 996;
+} */
+
 .loginContainer {
     display: flex;
     flex-direction: column;

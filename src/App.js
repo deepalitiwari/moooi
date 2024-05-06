@@ -8,6 +8,7 @@ import Main from "./Components/Main/Main";
 import Menu from "./Components/Menu/Menu";
 import Strategy from "./Components/Strategy/Strategy";
 import { data } from "./data";
+import { AllCollection } from "./Components/Items/AllCollection";
 import { Routes, Route } from "react-router-dom";
 import {
   beddingBath,
@@ -59,6 +60,14 @@ function App() {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const [loginSuccess, setLoginSuccess] = useState(false);
+
+  const toggleCardHeight = () => {
+    setIsExpanded(!isExpanded);
+  };
+  const HideBuyWhenCartOpen = () => {
+    setIsExpanded(false);
+  };
+
   const handleOpen = (msg) => {
     setOpen(true);
     setSuccessMsg(msg);
@@ -143,11 +152,14 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={beddingBath}
                 dataHead={beddingBathHead}
                 bottom={bottomArea}
+                cardItem={AllCollection}
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -163,6 +175,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={beddingBath}
@@ -183,6 +197,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={furniture}
@@ -203,6 +219,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={furniture}
@@ -223,6 +241,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={lighting}
@@ -243,6 +263,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={lighting}
@@ -263,6 +285,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={homeAccessories}
@@ -283,6 +307,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={homeAccessories}
@@ -303,6 +329,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={wallFloor}
@@ -323,6 +351,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={wallFloor}
@@ -343,6 +373,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={bodyBeauty}
@@ -363,6 +395,8 @@ function App() {
                 // backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <Item
                 data={bodyBeauty}
@@ -400,6 +434,8 @@ function App() {
                 backgroundColor={"#fff"}
                 leftHeader={"none"}
                 moooi={"start"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
               />
               <ViewBag />
               <Menu handleShow={handleShow} />
@@ -412,7 +448,11 @@ function App() {
           path="/"
           element={
             <>
-              <Header textColor={"#fff"} />
+              <Header
+                textColor={"#fff"}
+                toggleCardHeight={toggleCardHeight}
+                HideBuyWhenCartOpen={HideBuyWhenCartOpen}
+              />
               {/* <Header textColor={backgroundColor === '#fff' ? '#000' : '#fff'} backgroundColor={backgroundColor} /> */}
 
               <Main />

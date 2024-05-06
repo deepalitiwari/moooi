@@ -6,6 +6,7 @@ export const beddingBath = [
     price: "$250",
     available: "In stock",
     type: "beddingBath",
+    category: "bedding",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBedding%2FBedspread%2FDodo%20Pavone%2Fimage-thumb__51138__header_fullscreen_2x_jpg%2F6933-MO-Dodo-Pavone-Bedspread-Ivory.webp&w=2048&q=80",

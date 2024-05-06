@@ -1,3 +1,16 @@
+#productStories,
+#login,
+#signup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: brightness(75%);
+    backdrop-filter: blur(0px);
+    z-index: 996;
+}
+
 .MenuContiner {
     display: flex;
     justify-content: center;

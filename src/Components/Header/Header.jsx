@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { IoMdSearch } from "react-icons/io";
+import { GoSearch } from "react-icons/go";
 import { FiMic } from "react-icons/fi";
-import { HiOutlineViewBoards } from "react-icons/hi";
-import { MdOutlineShoppingBag } from "react-icons/md";
+import { RxDashboard } from "react-icons/rx";
+import { FiShoppingBag } from "react-icons/fi";
 import Bag from "../Bag/Bag";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -12,6 +12,8 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
   const [isBagOpen, setIsBagOpen] = useState(false);
   const [preScrollPosition, setProvScrollPos] = useState(window.scrollY);
   const [headerPosition, setHeaderPostion] = useState(null);
+  const [popup, setPopup] = useState(false);
+
   // const [isBackdropVisible, setIsBackdropVisible] = useState(false);
 
   const cartItem = useSelector((state) => state.cart.items);
@@ -28,8 +30,15 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
 
   function toogleBag() {
     setIsBagOpen(!isBagOpen);
+    setPopup(!popup);
     console.log(isBagOpen);
     // setIsBackdropVisible(!isBackdropVisible);
+  }
+
+  if (popup == false) {
+    sessionStorage.setItem("value", "false");
+  } else {
+    sessionStorage.setItem("value", "true");
   }
 
   return (
@@ -50,13 +59,13 @@ const Header = ({ textColor, backgroundColor, leftHeader, moooi }) => {
         </div>
         <div className="rightHead">
           <div className="hoverOn">
-            <IoMdSearch />
+            <GoSearch />
           </div>
           <div className="hoverOn">
-            <HiOutlineViewBoards />
+            <RxDashboard />
           </div>
           <div className="hoverOn shopingBagdiv">
-            <MdOutlineShoppingBag onClick={toogleBag} />
+            <FiShoppingBag onClick={toogleBag} />
             {/* {quantity > 0 && <span className="bagQuantity">{quantity}</span>} */}
             <span className="shopingQnty">{cartItem.length}</span>
           </div>

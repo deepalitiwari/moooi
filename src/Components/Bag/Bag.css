@@ -1,14 +1,22 @@
-.bag {
-    background-color: rgb(252, 249, 249);
+#bagContainer {
+    width: 100%;
+    height: 100vh;
     position: fixed;
-    width: 25%;
-    min-height: 40vh;
+    top: 0px;
+    backdrop-filter: blur(1px);
+}
+
+.bag {
+    background-color: #fff;
+    position: absolute;
+    width: min(450px, 100%);
+    min-height: 50vh;
     right: 10px;
     top: 10px;
     box-sizing: border-box;
     border-radius: 12px;
-    box-shadow: 10px 15px 45px #000,
-        inset 5px 5px 10px #ccc;
+    box-shadow: 3px 3px 11px rgba(0, 0, 0, .13);
+
 }
 
 .bagProducts {
@@ -25,7 +33,7 @@
 }
 
 .emptyCart h1 {
-    font-size: clamp(20px, 5vw, 34px);
+    font-size: clamp(15px, 5vw, 30px);
     font-weight: 600;
 }
 
@@ -135,26 +143,9 @@
 }
 
 
-@media(min-width:780px) and (max-width:1250px) {
-    .bag {
-        width: 50%;
-        right: 10px;
-        top: 70px;
-    }
-}
 
-@media(min-width:610px) and (max-width:780px) {
-    .bag {
-        width: 70%;
-        right: 10px;
-    }
-}
 
 @media(min-width:300px) and (max-width:610px) {
-    .bag {
-        width: 96%;
-    }
-
     .emptyCart {
         padding: 20px 0px;
         text-align: center;

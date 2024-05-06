@@ -16,7 +16,7 @@ import { homeAccessories } from "../Items/data4";
 import { wallFloor } from "../Items/data5";
 import { bodyBeauty } from "../Items/data6";
 import BuyItem from "../Buy_Item/BuyItem";
-const ProductDetail = () => {
+const ProductDetail = ({ toggleCardHeight, isExpanded }) => {
   const { type, index } = useParams();
   const [prodData, setData] = useState({});
 
@@ -58,6 +58,8 @@ const ProductDetail = () => {
           title={prodData.title}
           price={prodData.price}
           available={prodData.available}
+          toggleCardHeight={toggleCardHeight}
+          isExpanded={isExpanded}
         />
         <h1 className="head">{prodData.title}</h1>
         <h3>Moooi,2022</h3>
