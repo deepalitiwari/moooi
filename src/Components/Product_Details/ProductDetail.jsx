@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./ProductDetail.css";
-import {
-  MdOutlineFileDownload,
-  MdOutlineShare,
-  MdOutlineDashboard,
-  MdOutlineLocalShipping,
-} from "react-icons/md";
+import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbTruckReturn } from "react-icons/tb";
 import { GiCircleCage } from "react-icons/gi";
 import { useParams } from "react-router-dom";
+
 import { beddingBath } from "../Items/data1";
 import { furniture } from "../Items/data2";
 import { lighting } from "../Items/data3";
@@ -16,6 +12,7 @@ import { homeAccessories } from "../Items/data4";
 import { wallFloor } from "../Items/data5";
 import { bodyBeauty } from "../Items/data6";
 import BuyItem from "../Buy_Item/BuyItem";
+
 const ProductDetail = ({ toggleCardHeight, isExpanded }) => {
   const { type, index } = useParams();
   const [prodData, setData] = useState({});

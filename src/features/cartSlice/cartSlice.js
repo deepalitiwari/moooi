@@ -1,52 +1,51 @@
-// cartSlice.js
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
   totalPrice: 0,
 };
-function totalCalculatePrice(state) {
-  let amount = 0;
-  state.items.forEach((element) => {
-    amount = Number(element.price.slice(1)) * element.quantity + amount;
-  });
-  state.totalPrice = amount;
-}
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
     addToCart: (state, action) => {
+      const newItem = action.payload;
       const existingItem = state.items.find(
-        (item) => item.title === action.payload.title
+        (item) => item.title === newItem.title
       );
-      if (!existingItem) {
-        state.items.push(action.payload);
-        totalCalculatePrice(state);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        state.items.push({ ...newItem, quantity: 1 });
       }
+
+      state.totalPrice = calculateTotalPrice(state.items);
     },
     removeFromCart: (state, action) => {
-      const data = state.items.filter((element) => {
-        return element.title !== action.payload.title;
-      });
-      state.items = data;
-      totalCalculatePrice(state);
+      state.items = state.items.filter(
+        (item) => item.title !== action.payload.title
+      );
+      state.totalPrice = calculateTotalPrice(state.items);
     },
-
     updateQuantityByTitle: (state, action) => {
       const { title, newQuantity } = action.payload;
       const itemToUpdate = state.items.find((item) => item.title === title);
       if (itemToUpdate && newQuantity > 0) {
         itemToUpdate.quantity = newQuantity;
-        // console.log(newQuantity, Number(itemToUpdate.price.slice(1)));
         itemToUpdate.subtotal =
           newQuantity * Number(itemToUpdate.price.slice(1));
-        totalCalculatePrice(state);
+        state.totalPrice = calculateTotalPrice(state.items);
       }
     },
   },
 });
+
+const calculateTotalPrice = (items) => {
+  return items.reduce((total, item) => {
+    return total + item.quantity * Number(item.price.slice(1));
+  }, 0);
+};
 
 export const { addToCart, removeFromCart, updateQuantityByTitle } =
   cartSlice.actions;

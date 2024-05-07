@@ -5,7 +5,7 @@
      list-style-type: none;
      text-transform: uppercase;
      font-size: 16px;
-     padding-top: 102px;
+     padding-top: 110px;
  }
 
  .viewBag .top a {
@@ -14,9 +14,9 @@
  }
 
  .viewBag .empty h1 {
-     padding: 130px;
+     padding: clamp(60px, 5vw, 130px);
      text-align: center;
-     font-size: 55px;
+     font-size: clamp(30px, 5vw, 55px);
      font-weight: 300;
  }
 
@@ -73,7 +73,7 @@
  }
 
  .multiplyIcon {
-     font-size: 22px;
+     font-size: clamp(17px, 5vw, 22px);
 
  }
 
@@ -91,14 +91,14 @@
  }
 
  .counting .dropdown {
-     font-size: 20px;
+     font-size: clamp(15px, 5vw, 20px);
      border-radius: 30px;
      text-align: center;
      cursor: pointer;
  }
 
  .details .btn {
-     font-size: 17px;
+     font-size: clamp(14px, 5vw, 17px);
      padding: 0px 15px;
      border-radius: 23px;
      border: none;
@@ -150,7 +150,7 @@
  }
 
  .subTotalBottom .shippingDetails {
-     font-size: 14px;
+     font-size: clamp(12px, 5vw, 14px);
  }
 
  .overall .totalPrice {
@@ -161,14 +161,14 @@
  }
 
  .overall .totalPrice .head {
-     font-size: 25px;
+     font-size: clamp(20px, 5vw, 25px);
  }
 
  .overall .checkOut button {
      width: 100%;
      background-color: black;
      color: white;
-     font-size: 16px;
+     font-size: clamp(15px, 5vw, 18px);
      border-radius: 30px;
      padding: 10px;
  }
@@ -182,7 +182,7 @@
  }
 
  .bottomIcons h1 {
-     font-size: 20px;
+     font-size: clamp(16px, 5vw, 20px);
      font-weight: 400;
  }
 
@@ -191,7 +191,7 @@
  }
 
  .shippingIcons {
-     font-size: 40px;
+     font-size: clamp(30px, 5vw, 40px);
  }
 
  @media(max-width:1024px) {
@@ -214,10 +214,6 @@
          width: 80px;
      }
 
-     .counting .dropdown {
-         font-size: 16px;
-     }
-
      .details .delete {
          font-size: 16px;
      }
@@ -225,18 +221,5 @@
      .orderSummary {
          width: 85%;
      }
-
-     .bottomIcons h1 {
-         font-size: 16px;
-     }
-
-
-     .shippingIcons {
-         font-size: 30px;
-     }
-
-     /* .viewBag h1 {
-         font-size: 40px;
-     } */
 
  }

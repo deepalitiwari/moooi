@@ -4,7 +4,8 @@ import { SlArrowLeftCircle } from "react-icons/sl";
 import { MdOutlineManageSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function Item({ link, dataHead, data, bottom, cardItem }) {
+function Item({ link, dataHead, data, cardItem }) {
+  console.log(dataHead.name);
   const [dataItem, setDataItem] = useState(cardItem);
   const [filter, setFilter] = useState(dataHead.Btn[0]);
   useEffect(() => {
@@ -19,25 +20,29 @@ function Item({ link, dataHead, data, bottom, cardItem }) {
   }, [filter, cardItem, dataHead.Btn]);
   const filterHandler = (val) => {
     console.log(val);
-
+    console.log("filter val is:", filter);
     setFilter(val);
   };
   return (
     <div className="items">
       <div className="main">
-        <h1 className="heading">{dataHead.name}</h1>
+        <h1 className="heading">
+          {" "}
+          {filter.includes("All") ? filter.replace("All ", "") : filter}
+        </h1>
         <p className="para">
           Our collection contains work from emerging talent and internationally
           recognized designers. Together, we create A Life Extraordinary.
         </p>
         <div className="buttons">
           <div className="item-btn">
-          <Link to={link}>
-            <SlArrowLeftCircle className="icon" />
-</Link>
+            <Link to={link}>
+              <SlArrowLeftCircle className="icon" />
+            </Link>
             {dataHead.Btn.map((item, index) => {
               return (
                 <button
+                  className={item === filter ? "active" : null}
                   onClick={(e) => filterHandler(e.target.value)}
                   key={index}
                   value={item}
@@ -77,15 +82,17 @@ function Item({ link, dataHead, data, bottom, cardItem }) {
       <div className="item-bottom">
         <h1 className="heading">our suggestions</h1>
         <p className="para">
-          Turn more dreams into reality. <br /> {bottom.p}
+          Turn more dreams into reality. <br />
+          See more types of {dataHead.name}
         </p>
         <div className="btn">
-          {bottom.bottomBtn.map((item, index) => {
+          {dataHead.Btn.map((item, index) => {
             return (
               <button
-                value={item}
-                key={index}
+                className={item === filter ? "active" : null}
                 onClick={(e) => filterHandler(e.target.value)}
+                key={index}
+                value={item}
               >
                 {item}
               </button>

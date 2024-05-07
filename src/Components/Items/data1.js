@@ -126,7 +126,7 @@ export const beddingBath = [
     price: "$180",
     available: "In stock",
     type: "beddingBath",
-    category: "bedding",
+    category: "Bath",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBath%2FBathrobe%2Fimage-thumb__64219__header_fullscreen_2x_jpg%2FDodo-Pavone-Bathrobe_White_UV_UV-10_Topshot.webp&w=1080&q=80",
@@ -188,9 +188,4 @@ export const beddingBath = [
 export let beddingBathHead = {
   name: "Bedding & Bath",
   Btn: ["All Bedding & Bath", "Bath", "bedding"],
-};
-
-export let bottomArea = {
-  p: "See more types of Bedding & Bath",
-  bottomBtn: ["bath", "bedding"],
 };

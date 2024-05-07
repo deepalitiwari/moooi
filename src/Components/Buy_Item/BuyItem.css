@@ -99,19 +99,6 @@
     height: 250px;
 }
 
-
-/* @media(min-width:734px) and (max-width: 1052px) {
-    .buyItems {
-        width: 40%;
-    }
-}
-
-@media(min-width:375px) and (max-width:734px) {
-    .buyCart {
-        min-width: 90% !important;
-    }
-} */
-
 #buyItems-id {
     display: block;
 }

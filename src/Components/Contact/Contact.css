@@ -25,12 +25,12 @@
 }
 
 .Contact .top h1 {
-    font-size: 100px;
+    font-size: clamp(50px, 5vw, 100px);
     font-weight: 300;
 }
 
 .Contact .top .para {
-    font-size: 25px;
+    font-size: clamp(20px, 5vw, 25px);
     font-weight: 100;
     padding: 30px 550px;
 }
@@ -54,7 +54,7 @@
 
 .stores h1 {
     text-align: center;
-    font-size: 82px;
+    font-size: clamp(42px, 5vw, 82px);
     font-weight: 100;
 }
 
@@ -107,12 +107,12 @@
 
 .bottom h1 {
     text-align: center;
-    font-size: 65px;
+    font-size: clamp(35px, 5vw, 65px);
     font-weight: 300;
 }
 
 .bottom .para {
-    font-size: 25px;
+    font-size: clamp(17px, 5vw, 25px);
     color: gray;
     text-align: center;
 }
@@ -144,18 +144,13 @@
 
 
 @media(max-width:520px) {
-    .Contact .top h1 {
-        font-size: 50px;
-    }
 
     .Contact .top .para {
-        font-size: 20px;
         padding: 10px;
     }
 
     .stores h1 {
         text-align: center;
-        font-size: 42px;
         font-weight: 400;
     }
 
@@ -168,16 +163,7 @@
     }
 
     .bottom h1 {
-        font-size: 35px;
         font-weight: 500;
-    }
-
-    .bottom .para {
-        font-size: 17px;
-    }
-
-    .infoCart h3 {
-        font-size: 20px;
     }
 
     .infoCart .details p {
@@ -191,7 +177,6 @@
     }
 
     .Contact .top .para {
-        font-size: 20px;
         padding: 0px;
     }
 }

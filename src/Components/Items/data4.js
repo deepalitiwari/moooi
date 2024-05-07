@@ -6,6 +6,7 @@ export const homeAccessories = [
     price: "$400",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Decor",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FEvery%20Human%2Fimage-thumb__65854__header_fullscreen_2x_jpg%2FEvery-Human-Bottle-L-White-sticks.webp&w=828&q=80",
@@ -13,6 +14,7 @@ export const homeAccessories = [
     price: "$95",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://moooi.centracdn.net/client/dynamic/images/995_d2a97c63c9.jpg",
@@ -21,6 +23,7 @@ export const homeAccessories = [
     price: "$35",
     available: "In stock",
     type: "homeAccessories",
+    category: "Seasonal Decor",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FHerbarium%20of%20Extinct%20Plants%2Fimage-thumb__34104__header_fullscreen_2x_jpg%2FHerbarium-of-Extinct-Plants-Pillow-Rectangular-Front.webp&w=3840&q=80",
@@ -28,6 +31,7 @@ export const homeAccessories = [
     price: "$95",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FBisanto%2Fimage-thumb__36924__header_fullscreen_2x_jpg%2FAdriano-50x50-front.jpg&w=1080&q=80",
@@ -35,6 +39,7 @@ export const homeAccessories = [
     price: "$95",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FHome-Fragrance%2FRoom%20Fragrance%20Defy%20Gravity%2Fimage-thumb__38084__header_fullscreen_2x_jpg%2Froom-spray-defy-gravity-spray-V2.jpg&w=1080&q=80",
@@ -42,6 +47,7 @@ export const homeAccessories = [
     price: "$65",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FHome-Fragrance%2FRoom%20Fragrance%20Paper%20Play%2Fimage-thumb__38094__header_fullscreen_2x_jpg%2Froom-spray-paper-play-spray-V2.jpg&w=1080&q=80",
@@ -49,6 +55,7 @@ export const homeAccessories = [
     price: "$65",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FHome-Fragrance%2FRoom%20Fragrance%20Beauty%20Blooms%2Fimage-thumb__38074__header_fullscreen_2x_jpg%2Froom-spray-beauty-blooms-spray-V2.jpg&w=1080&q=80",
@@ -56,6 +63,7 @@ export const homeAccessories = [
     price: "$65",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FExtinct%20Animals%20Ornaments%2Fimage-thumb__38949__header_fullscreen_2x_jpg%2FMoooi-Armoured-Boar-Ornaments.jpg&w=1080&q=80",
@@ -63,6 +71,7 @@ export const homeAccessories = [
     price: "$30",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Decor",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FRe-Cut%20Denim%20Pillows%2Fimage-thumb__40618__header_fullscreen_2x_jpg%2FRe-Cut-Denim-Pillow-Black-flower-front.webp&w=3840&q=80",
@@ -70,6 +79,7 @@ export const homeAccessories = [
     price: "$90",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FMonster%20Basketball%2FMonster%20Basketball%20Pink%2Fimage-thumb__66949__header_fullscreen_2x_jpg%2FMoooi-Monster-Basketball-Pink-Rotation-background-image.webp&w=1080&q=80",
@@ -77,6 +87,7 @@ export const homeAccessories = [
     price: "$85",
     available: "In stock",
     type: "homeAccessories",
+    category: "Stationary",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FOil%20Pillow%2Fimage-thumb__19349__header_fullscreen_2x_jpg%2Foil-Cross-front.webp&w=1080&q=80",
@@ -84,6 +95,7 @@ export const homeAccessories = [
     price: "$145",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FDwarf%20Rhino%20Pillow%2Fimage-thumb__19287__header_fullscreen_2x_jpg%2FDwarf-Rhino-pillow-front.webp&w=1080&q=80",
@@ -91,6 +103,7 @@ export const homeAccessories = [
     price: "$75",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FHome-Fragrance%2FRoom%20Fragrance%20Devine%20Dreams%2Fimage-thumb__54113__header_fullscreen_2x_jpg%2Froom-spray-divine-dreams-reed-diffuser-V2.webp&w=1080&q=80",
@@ -98,6 +111,7 @@ export const homeAccessories = [
     price: "$65",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FUmbrella%20Squid%20Pillow%20Gold%20Corduroy%2Fimage-thumb__53938__header_fullscreen_2x_jpg%2FUmbrella-Squid-pillow_Gold-front_Topshot.webp&w=1080&q=80",
@@ -105,6 +119,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FMenagerie-Pillows%2Fimage-thumb__54023__header_fullscreen_2x_jpg%2FMenagerie-pilllow-Square_Raven-front_Topshot.webp&w=1080&q=80",
@@ -112,6 +127,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FFlying%20Coral%20Fish%20Pillow%2Fimage-thumb__53863__header_fullscreen_2x_jpg%2FFlying-Coral-Fish-pillow_Blue-front_Topshot.webp&w=1080&q=80",
@@ -119,6 +135,7 @@ export const homeAccessories = [
     price: "$190",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FEmbroidered%20Flying%20Coral%20Fish%20Pillow%2Fimage-thumb__53853__header_fullscreen_2x_jpg%2FEmbroidered-Flying-Coral-Fish-pillow_Blue-front_Topshot.webp&w=1080&q=80",
@@ -126,6 +143,7 @@ export const homeAccessories = [
     price: "$190",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FBlooming%20Seadragon%20Pillow%2Fimage-thumb__53803__header_fullscreen_2x_jpg%2FBlooming-Seadragon-pillow_Coral-font_Topshot.webp&w=1080&q=80",
@@ -133,6 +151,7 @@ export const homeAccessories = [
     price: "$250",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FDodo%20Pavone%20Pillow%2Fimage-thumb__53833__header_fullscreen_2x_jpg%2FDodo-Pavone-pillow_Blue-front_Topshot.webp&w=1080&q=80",
@@ -140,6 +159,7 @@ export const homeAccessories = [
     price: "$150",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FDwarf%20Rhino%20Pillow%2Fimage-thumb__53838__header_fullscreen_2x_jpg%2FDwarf-Rhino-pillow_Grey-front_Topshot.webp&w=1080&q=80",
@@ -147,6 +167,7 @@ export const homeAccessories = [
     price: "$160",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FBearded%20Leopard%20Pillow%2Fimage-thumb__53793__header_fullscreen_2x_jpg%2FBearded-Leopard-pillow_Brown-front_Topshot.webp&w=1080&q=80",
@@ -154,6 +175,7 @@ export const homeAccessories = [
     price: "$150",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FArmoured%20Boar%20Pillow%2Fimage-thumb__53738__header_fullscreen_2x_jpg%2FArmoured-Boar-pillow_Multi-front_Topshot.webp&w=1080&q=80",
@@ -161,6 +183,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FBlooming%20Seadragon%20pillow%20Animal%20Multi%2Fimage-thumb__53998__header_fullscreen_2x_jpg%2FBlooming-Seadragon-pillow_Animal-Multi-front_Topshot.webp&w=1080&q=80",
@@ -168,6 +191,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FBlushing%20Sloth%20Pillow%2Fimage-thumb__53808__header_fullscreen_2x_jpg%2FBlushing-Sloth-pillow_Multi-front_Topshot.webp&w=1080&q=80",
@@ -175,6 +199,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FCalligraphy%20Bird%20Pillow%2Fimage-thumb__53823__header_fullscreen_2x_jpg%2FCalligraphy-Bird-pillow_Multi-front_Topshot.webp&w=1080&q=80",
@@ -182,6 +207,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FDecorative%20Pillows%2FDodo%20Pavone%20pillow%20Animal%20Black%2Fimage-thumb__53983__header_fullscreen_2x_jpg%2FDodo-Pavone-pillow_Animal-Black-front_Topshot.webp&w=1080&q=80",
@@ -189,6 +215,7 @@ export const homeAccessories = [
     price: "$125",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FExtinct%20Animals%20Playing%20Cards%2Fimage-thumb__63984__header_fullscreen_2x_jpg%2FMoooi-Extinct-Animals-Playing-Cards.webp&w=1080&q=80",
@@ -196,6 +223,7 @@ export const homeAccessories = [
     price: "$25",
     available: "In stock",
     type: "homeAccessories",
+    category: "Stationary",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FBlow%20Away%20Vase%2F1311%2Fimage-thumb__1311__header_fullscreen_2x_jpg%2FBlow-away-Vase-front.webp&w=1080&q=80",
@@ -203,6 +231,7 @@ export const homeAccessories = [
     price: "$800",
     available: "In stock",
     type: "homeAccessories",
+    category: "Seasonal Decor",
   },
   {
     src: "https://moooi.centracdn.net/client/dynamic/images/994_5ba75a8cd5.jpg",
@@ -210,6 +239,7 @@ export const homeAccessories = [
     price: "$74",
     available: "In stock",
     type: "homeAccessories",
+    category: "Stationary",
   },
   {
     src: "https://moooi.centracdn.net/client/dynamic/images/990_59eaa160dc.jpg",
@@ -217,6 +247,7 @@ export const homeAccessories = [
     price: "$50",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://moooi.centracdn.net/client/dynamic/images/991_82e8a22a29.jpg",
@@ -224,6 +255,7 @@ export const homeAccessories = [
     price: "$95",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://moooi.centracdn.net/client/dynamic/images/992_11ce2f4014.jpg",
@@ -231,6 +263,7 @@ export const homeAccessories = [
     price: "$95",
     available: "In stock",
     type: "homeAccessories",
+    category: "Home Fragnance",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FMenagerie%20of%20EA%20Pillow%2Fimage-thumb__20544__header_fullscreen_2x_jpg%2FMoooi-Menagerie-Pillow-black-back-calligraphy-bird.webp&w=1080&q=80",
@@ -238,6 +271,7 @@ export const homeAccessories = [
     price: "$136",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FPillows%2FSpace-Escape-Pillows%2Fimage-thumb__24643__header_fullscreen_2x_jpg%2FMoooi-Pillow-Mars-Front.webp&w=1080&q=80",
@@ -245,27 +279,17 @@ export const homeAccessories = [
     price: "$136",
     available: "In stock",
     type: "homeAccessories",
+    category: "Decorative Pillows",
   },
 ];
 export let homeAccessoriesHead = {
   name: "Home accessories",
   Btn: [
     "All Home accessories",
-    "Seasonal Decor",
     "Decorative Pillows",
-    "Stationary",
     "Home Decor",
     "Home Fragnance",
-  ],
-};
-
-export let homeAccessoriesbottomArea = {
-  p: "See more types of Home accessories",
-  bottomBtn: [
-    "Seasonal Decor",
-    "Decorative Pillows",
     "Stationary",
-    "Home Decor",
-    "Home Fragnance",
+    "Seasonal Decor",
   ],
 };

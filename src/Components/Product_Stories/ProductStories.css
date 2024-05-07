@@ -16,7 +16,6 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    /* backdrop-filter: blur(5px); */
     width: min(280px, 90%);
     height: min(520px, 70%);
     overflow-y: auto;

@@ -11,7 +11,7 @@
 
 .main .heading {
     text-align: center;
-    font-size: 72px;
+    font-size: (45px, 5vw, 72px);
     font-weight: 400;
     font-style: italic;
 }
@@ -24,7 +24,7 @@
 }
 
 .main .buttons button {
-    padding: 5px 18px;
+    padding: 10px 20px;
     font-size: 17px;
 }
 
@@ -40,10 +40,11 @@
     background-color: transparent;
     border: 1px solid black;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .item-btn .icon {
-    font-size: 30px;
+    font-size: clamp(25px, 5vw, 35px);
 }
 
 .filter-btn {
@@ -58,6 +59,11 @@
     color: white;
     border-radius: 30px;
     width: 150px;
+    cursor: pointer;
+}
+
+a {
+    color: rgb(100, 97, 97);
 }
 
 .images {
@@ -112,7 +118,7 @@
 }
 
 .item-bottom .para {
-    font-size: 48px;
+    font-size: clamp(40px, 5vw, 48px);
     text-align: center;
     /* padding: 0 400px; */
     color: rgb(54, 53, 53);
@@ -136,7 +142,21 @@
     padding: 5px 18px;
     font-size: 17px;
     color: rgb(62, 61, 61);
+    cursor: pointer;
 }
+
+.item-btn .active {
+    background-color: #e8e5df;
+    box-shadow: inset 0 0 0 1px transparent;
+    cursor: not-allowed;
+}
+
+.btn .active {
+    background-color: #e8e5df;
+    box-shadow: inset 0 0 0 1px transparent;
+    cursor: not-allowed;
+}
+
 
 @media(min-width : 375px) and (max-width: 566px) {
     .item-btn {
@@ -149,12 +169,7 @@
 }
 
 @media(max-width:567px) {
-    .main .heading {
-        font-size: 45px;
-    }
-
     .main .para {
-        font-size: 16px;
         padding: 0px;
     }
 
@@ -174,16 +189,11 @@
         margin: 50px 20px;
     }
 
-    .item-btn .icon {
-        font-size: 25px;
-    }
-
     .filter-btn button {
         width: 70%;
     }
 
     .item-carts {
-        /* width: 100%; */
         margin: 0 0 10px;
         padding: 0;
     }
@@ -198,7 +208,6 @@
     }
 
     .item-bottom .para {
-        font-size: 40px;
         font-weight: 200;
         margin: 0;
     }
@@ -209,10 +218,6 @@
 }
 
 @media(min-width:567px) and (max-width:1200px) {
-    .main .heading {
-        font-size: 45px;
-    }
-
     .main .para {
         font-size: 26px;
         padding: 0px;
@@ -223,12 +228,6 @@
         flex-wrap: wrap;
     }
 
-
-    /* 
-    .filter-btn button {
-        width: 20%;
-    } */
-
     .item-bottom {
         margin: 100px 10px;
     }
@@ -238,11 +237,7 @@
     }
 
     .item-bottom .para {
-        font-size: 40px;
         font-weight: 200;
         margin: 0;
     }
-
-
-
 }

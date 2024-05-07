@@ -60,7 +60,7 @@
 .bootom-content a {
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: clamp(20px, 5vw, 30px);
 }
 
 .bootom-area {
@@ -93,7 +93,7 @@
     gap: 30px;
 }
 
-@media(max-width:576px) {
+@media(max-width:705px) {
     .btn-Icon {
         flex-direction: column;
     }
@@ -111,10 +111,6 @@
         flex-direction: column;
         gap: 0;
         line-height: 2rem;
-    }
-
-    .bootom-content a {
-        font-size: 20px;
     }
 
     .bootom-area {
@@ -138,16 +134,10 @@
     }
 }
 
-@media(min-width:576px) and (max-width:1200px) {
+@media(min-width:705px) and (max-width:1200px) {
     .bootom-content {
         gap: 4vh;
-        height: 150px;
-    }
-
-    .bootom-content a {
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
+        height: 180px;
     }
 
     .bootom-area {

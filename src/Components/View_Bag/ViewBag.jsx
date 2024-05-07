@@ -17,7 +17,7 @@ import Collection from "../Browse_Our_Collection/Collection";
 const ViewBag = () => {
   const dispatch = useDispatch();
   const cartItem = useSelector((state) => state.cart.items);
-  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  // const totalPrice = useSelector((state) => state.cart.totalPrice);
   console.log(cartItem);
   //Check the cart is empty
   const isShoppingBagEmpty = cartItem.length === 0;
@@ -99,11 +99,15 @@ const ViewBag = () => {
                           </select>
                         </div>
                         <div>
-                          <button className="btn"
-                            onClick={() =>deleteHandler({src,price,available,title,})}>
+                          <button
+                            className="btn"
+                            onClick={() =>
+                              deleteHandler({ src, price, available, title })
+                            }
+                          >
                             Delete
                           </button>
-                          <button className="btn" > Save to mood boards</button>
+                          <button className="btn"> Save to mood boards</button>
                         </div>
                       </div>
                       <div className="ProductPrice">

@@ -9,7 +9,7 @@
 .bag {
     background-color: #fff;
     position: absolute;
-    width: min(450px, 100%);
+    width: min(450px, 95%);
     min-height: 50vh;
     right: 10px;
     top: 10px;
@@ -84,7 +84,6 @@
 
 .product_Details img {
     width: 80px;
-    /* width: 20%; */
     height: 120px;
 }
 
