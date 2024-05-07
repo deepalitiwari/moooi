@@ -6,6 +6,7 @@ export const bodyBeauty = [
     price: "$159",
     available: "In stock",
     type: "bodyBeauty",
+    category: "Accessories"
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FMenagerie%20of%20Extinct%20Animals%20Silk%20Scarf%2Fimage-thumb__18156__header_fullscreen_2x_jpg%2FMoooi-silk-scarf-menagerie.jpg&w=1080&q=80",
@@ -13,6 +14,8 @@ export const bodyBeauty = [
     price: "$132",
     available: "In stock",
     type: "bodyBeauty",
+    category: "Accessories"
+
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FMemento%20Moooi%20Medley%20Scarf%2Fimage-thumb__48093__header_fullscreen_2x_jpg%2FMemento-Moooi-Medley-Scarf.webp&w=1080&q=80",
@@ -21,6 +24,7 @@ export const bodyBeauty = [
     price: "$241",
     available: "In stock",
     type: "bodyBeauty",
+    category: "Accessories"
   },
   {
     src: "https://moooi.centracdn.net/client/dynamic/images/1221_1bf12580b5.jpg",
@@ -28,6 +32,7 @@ export const bodyBeauty = [
     price: "$35",
     available: "In stock",
     type: "bodyBeauty",
+    category : "Body"
   },
   {
     src: "https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FCollection%2FRendezvous%20Tokyo%20Blue%20scarf%2Fimage-thumb__19259__header_fullscreen_2x_jpg%2FRendezvous-Tokyo-Blue-Scarf.jpg&w=1080&q=80",
@@ -35,6 +40,7 @@ export const bodyBeauty = [
     price: "$35",
     available: "In stock",
     type: "bodyBeauty",
+    category: "Accessories"
   },
 ];
 export let bodyBeautyHead = {

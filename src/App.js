@@ -8,7 +8,7 @@ import Main from "./Components/Main/Main";
 import Menu from "./Components/Menu/Menu";
 import Strategy from "./Components/Strategy/Strategy";
 import { data } from "./data";
-import { AllCollection } from "./Components/Items/AllCollection";
+import { AllCollection, collectionhead } from "./Components/Items/AllCollection";
 import { Routes, Route } from "react-router-dom";
 import {
   beddingBath,
@@ -160,6 +160,7 @@ function App() {
                 dataHead={beddingBathHead}
                 bottom={bottomArea}
                 cardItem={AllCollection}
+                link={"/"}
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -204,6 +205,9 @@ function App() {
                 data={furniture}
                 dataHead={furnitureHead}
                 bottom={furniturebottomArea}
+                cardItem={furniture}
+                link={"/Bedding & Bath"}
+
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -248,6 +252,9 @@ function App() {
                 data={lighting}
                 dataHead={lightingHead}
                 bottom={lightingbottomArea}
+                cardItem={lighting}
+                link={"/Furniture"}
+
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -292,6 +299,9 @@ function App() {
                 data={homeAccessories}
                 dataHead={homeAccessoriesHead}
                 bottom={homeAccessoriesbottomArea}
+                cardItem={homeAccessories}
+                link={"/Lighting"}
+
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -314,6 +324,7 @@ function App() {
                 data={homeAccessories}
                 dataHead={homeAccessoriesHead}
                 bottom={homeAccessoriesbottomArea}
+                
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -336,6 +347,9 @@ function App() {
                 data={wallFloor}
                 dataHead={wallFloorHead}
                 bottom={wallFloorbottomArea}
+                cardItem={wallFloor}
+                link={"/Home Accessories"}
+
               />
               <Menu handleShow={handleShow} />
               <Footer />
@@ -380,6 +394,9 @@ function App() {
                 data={bodyBeauty}
                 dataHead={bodyBeautyHead}
                 bottom={bodyBeautybottomArea}
+                cardItem={bodyBeauty}
+                link={"/Home Accessories"}
+
               />
               <Menu handleShow={handleShow} />
               <Footer />

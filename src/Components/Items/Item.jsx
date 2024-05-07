@@ -4,7 +4,7 @@ import { SlArrowLeftCircle } from "react-icons/sl";
 import { MdOutlineManageSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function Item({ dataHead, data, bottom, cardItem }) {
+function Item({ link, dataHead, data, bottom, cardItem }) {
   const [dataItem, setDataItem] = useState(cardItem);
   const [filter, setFilter] = useState(dataHead.Btn[0]);
   useEffect(() => {
@@ -32,8 +32,9 @@ function Item({ dataHead, data, bottom, cardItem }) {
         </p>
         <div className="buttons">
           <div className="item-btn">
+          <Link to={link}>
             <SlArrowLeftCircle className="icon" />
-
+</Link>
             {dataHead.Btn.map((item, index) => {
               return (
                 <button
