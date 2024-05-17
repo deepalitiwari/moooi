@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Bag.css";
 import { IoMdClose } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";

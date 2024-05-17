@@ -45,7 +45,7 @@ function App() {
     }, 2600);
 
     return () => clearTimeout(timer);
-    console.log(loading);
+    // console.log(loading);
   }, []);
 
   const toggleCardHeight = () => {
@@ -478,7 +478,7 @@ function App() {
                   h3="Design Dream"
                   src="https://www.moooi.com/_next/image?url=https%3A%2F%2Fcdn.moooi.com%2Ftmp%2Fimage-thumbnails%2FWeb-Items%2FStories%2FPodcasts%2Fimage-thumb__62604__header_fullscreen_2x%2FPodcast_Design_Dreams_Mobile_Phone_Walking_In_Clouds.png&w=1080&q=80"
                   direction="row-reverse"
-                  style="#4C363A;"
+                  style="#4C363A"
                   btn="listen now"
                 >
                   Moooi Through the Eyes of Rebelo de Andrade Architecture

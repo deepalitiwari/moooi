@@ -10,11 +10,6 @@ const ProductStories = ({
   handleSignup,
   handleContactClick,
 }) => {
-  // const handleClick = () => {
-  //   // handleMenu(); // Close the menu
-  //   window.scrollTo(0, 0); // Scroll to the top of the page
-  // };
-
   const [text, setText] = useState("");
   const handleText = (e) => {
     setText(e.target.value);
